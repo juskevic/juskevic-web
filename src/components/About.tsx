@@ -1,24 +1,7 @@
 'use client'
 import React, {useEffect, useRef} from 'react';
 import {Accordion, AccordionItem, Card, CardBody, CardHeader, Chip, ScrollShadow, Tab, Tabs} from "@nextui-org/react";
-import {
-    IconBrandHtml5,
-    IconBrandReact,
-    IconBrandJavascript,
-    IconBrandCss3,
-    IconBrandBootstrap,
-    IconBrandNextjs,
-    IconBrandTailwind,
-    IconBrandFramerMotion,
-    IconBrandNodejs,
-    IconBrandGit,
-    IconBrandNpm,
-    IconSparkles,
-    IconClock,
-    IconNotes,
-    IconCode,
-    IconBrandTypescript
-} from "@tabler/icons-react"
+import {IconBrandHtml5, IconBrandReact, IconBrandJavascript, IconBrandCss3, IconBrandBootstrap, IconBrandNextjs, IconBrandTailwind, IconBrandFramerMotion, IconBrandNodejs, IconBrandGit, IconBrandNpm, IconSparkles, IconClock, IconNotes, IconCode, IconBrandTypescript} from "@tabler/icons-react"
 
 import ReadMyStoryModal from "@/components/ui/ReadMyStoryModal";
 
