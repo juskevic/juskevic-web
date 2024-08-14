@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import { NextUIProvider } from '@nextui-org/react'
+import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,8 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
       <html lang="en">
         <body className={inter.className}>
           <NextUIProvider>
-            {children}
+              {children}
+              <Footer />
           </NextUIProvider>
         </body>
       </html>
