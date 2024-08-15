@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 import {Caveat, Poppins, Inter} from "next/font/google";
 import {Button, Tooltip} from "@nextui-org/react";
 import SocialsButtonGroup from "@/components/ui/SocialsButtonGroup";
-import { IconVolume, IconArrowDown } from '@tabler/icons-react';
+import { IconVolume } from '@tabler/icons-react';
 
 const COMMON_TEXT_COLOR = 'text-black';
 
@@ -69,8 +69,9 @@ export default function Landing() {
                                 >
                                 </audio>
                                 <Tooltip content="Listen to the pronaucination" showArrow={true}>
-                                    <Button radius="full" isIconOnly onClick={playAudio} variant="light" size="sm" as="button" className="text-gray-400 mt-1">
-                                        <IconVolume stroke={1.5} />
+                                    <Button radius="full" isIconOnly onClick={playAudio} variant="light" size="sm"
+                                            as="button" className="text-gray-400 mt-1">
+                                        <IconVolume stroke={1.5}/>
                                     </Button>
                                 </Tooltip>
                             </div>
@@ -83,9 +84,6 @@ export default function Landing() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="flex justify-center align-middle pt-32 md:pt-16 animate-fade-down animate-delay-[2500ms]">
-                <IconArrowDown stroke={1.5} size={60} className="animate-bounce animate-infinite animate-duration-[1700ms] animate-ease-in"/>
             </div>
         </>
     );
