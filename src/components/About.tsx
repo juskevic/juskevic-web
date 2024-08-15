@@ -5,7 +5,11 @@ import {IconBrandHtml5, IconBrandReact, IconBrandJavascript, IconBrandCss3, Icon
 
 import ReadMyStoryModal from "@/components/ui/ReadMyStoryModal";
 
-export default function AboutMe() {
+interface AboutProps {
+    id?: string;
+}
+
+const About: React.FC<AboutProps> = ({}) => {
 
     const AnimateDivAbout1 = useRef(null);
     const AnimateDivAbout2 = useRef(null);
@@ -165,3 +169,5 @@ export default function AboutMe() {
         </>
     )
 }
+
+export default About;
