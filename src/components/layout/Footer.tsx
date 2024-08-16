@@ -1,10 +1,12 @@
 import React from "react";
+import {Divider} from "@nextui-org/react";
 
 const Footer = () => {
     return (
         <>
-            <footer className="flex flex-col justify-center p-5 space-y-2 pt-72 text-neutral-800">
-                <p className="text-center">© 2024 Max Juškevič.</p>
+            <Divider />
+            <footer className="p-5 text-center text-black">
+                <p>&copy; {new Date().getFullYear()} Max Juškevič. All rights reserved.</p>
             </footer>
         </>
     )
