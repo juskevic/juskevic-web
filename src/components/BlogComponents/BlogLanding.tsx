@@ -13,13 +13,18 @@ export default function BlogLanding() {
         <>
             <div className="flex justify-center">
                 <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:justify-evenly w-full">
-                    <div>
-                        <h1 className={`${poppinsFont.className} font-bold text-4xl xl:text-6xl space-y-1`}>
+                    <div className="space-y-10">
+                        <div className={`${poppinsFont.className} font-bold text-4xl xl:text-6xl space-y-1`}>
                             {/*{"Thoughts on Code, Design, and Other Stuff"}*/}
                             <div className="animate-fade-down animate-delay-[200ms]">{"Thoughts on"}</div>
                             <div className="opacity-90 animate-fade-down animate-delay-[400ms]">{"Code, Design,"}</div>
                             <div className="opacity-90 animate-fade-down animate-delay-[600ms]">{"and Other Stuff"}</div>
-                        </h1>
+                        </div>
+                        <div>
+                            <div className="md:w-4/5 xl:w-1/2 text-lg xl:text-2xl text-gray-600 animate-fade animate-delay-[1000ms]">
+                                <span>{"I’m passionate about writing code and sharing how it builds the web we use every day."}</span>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div className="text-xl flex flex-row gap-1 pb-2 md:pb-3 animate-fade-down animate-delay-[700ms]">

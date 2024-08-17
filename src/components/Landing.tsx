@@ -52,8 +52,8 @@ export default function Landing() {
                     </div>
                     <div className="flex flex-col pt-10 md:pt-14 justify-start animate-fade-down animate-delay-[1000ms]">
                         <div>
-                            <div className="w-[350px] md:w-[380px] pb-8">
-                                <p className={`${InterFont300.className} text-lg text-gray-600 animate-fade animate-delay-[2000ms]`}>
+                            <div className="w-[350px] md:w-[380px] xl:w-full pb-8">
+                                <p className={`${InterFont300.className} text-lg md:text-xl xl:text-2xl text-gray-600 animate-fade animate-delay-[2000ms]`}>
                                     <span>{"I love creating great user experiences through "}</span>
                                     <span className="bg-green-400 bg-opacity-20 rounded">{"UI and UX design."}</span>
                                 </p>
