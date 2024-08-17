@@ -2,12 +2,13 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
-import { NextUIProvider } from '@nextui-org/react'
+import {Providers} from "@/app/providers";
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const viewport: Viewport = {
     width: 'device-width',
@@ -85,11 +86,11 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
   return (
       <html lang="en">
         <body className={`${inter.className} light text-foreground inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]`}>
-          <NextUIProvider>
+          <Providers>
               <Header />
               {children}
               <Footer />
-          </NextUIProvider>
+          </Providers>
         </body>
       </html>
   );

@@ -1,10 +1,21 @@
 'use client'
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Button, ButtonGroup} from "@nextui-org/react";
+import {
+    Navbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarMenuToggle,
+    NavbarMenu,
+    NavbarMenuItem,
+    Button,
+    ButtonGroup,
+    Breadcrumbs,
+    BreadcrumbItem
+} from "@nextui-org/react";
 import {Link} from "react-scroll";
 import {IconFolders, IconMessages, IconPencil, IconUserCircle} from '@tabler/icons-react';
 
-export default function Header() {
+export default function Header( ) {
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -13,9 +24,10 @@ export default function Header() {
 
             <NavbarContent>
                 <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden"/>
-                <NavbarBrand>
-                    <p className="font-bold text-inherit">juskevic</p>
-                </NavbarBrand>
+                <Breadcrumbs>
+                    <BreadcrumbItem href="/">Home</BreadcrumbItem>
+                    <BreadcrumbItem href="/blog">Blog</BreadcrumbItem>
+                </Breadcrumbs>
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
