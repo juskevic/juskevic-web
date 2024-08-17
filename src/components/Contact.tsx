@@ -6,7 +6,7 @@ import {IconBrandGithub, IconBrandTelegram, IconBrandLinkedin, IconMail, IconBra
 export default function Socials() {
     return (
         <>
-            <div className="flex justify-center">
+            <div className="flex justify-center pb-32">
                 <Card className="shadow-none bg-opacity-25 md:w-[600px]">
                     <CardHeader>
                         <h2 className="font-medium text-3xl md:text-4xl !text-left">{"Let's get in touch"}</h2>

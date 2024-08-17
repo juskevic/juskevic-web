@@ -1,12 +1,15 @@
 import React from "react";
-import {Divider} from "@nextui-org/react";
+import {IconHeartFilled} from "@tabler/icons-react";
 
 const Footer = () => {
     return (
         <>
-            <Divider />
-            <footer className="p-5 text-center text-black">
-                <p>&copy; {new Date().getFullYear()} Max Juškevič. All rights reserved.</p>
+            <footer className="md:text-medium flex justify-evenly p-5 bg-black border-t-5 border-t-gray-300">
+                <p className="text-white">&copy; {new Date().getFullYear()} Max Juškevič. All rights reserved.</p>
+                <div className="hidden text-white xl:flex flex-row gap-1">
+                    <p>Build on top of Next.js, using React, Tailwind CSS & NextUI</p>
+                    <IconHeartFilled stroke={1}/>
+                </div>
             </footer>
         </>
     )
