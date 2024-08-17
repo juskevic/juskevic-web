@@ -8,6 +8,8 @@ const poppinsFont = Poppins({
     subsets: ['latin'],
 });
 
+//TODO: Change the tagline to something more normal.
+
 export default function BlogLanding() {
     return (
         <>

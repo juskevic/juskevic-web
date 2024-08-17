@@ -8,6 +8,8 @@ import {
 } from "@nextui-org/react";
 import {IconArrowBack, IconSearch,} from '@tabler/icons-react';
 
+//TODO: Make the search bar work, adjust fonts?
+
 export default function BlogHeader( ) {
 
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
