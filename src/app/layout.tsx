@@ -84,7 +84,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
   return (
       <html lang="en">
-        <body className={inter.className}>
+        <body className={`${inter.className} light text-foreground inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]`}>
           <NextUIProvider>
               <Header />
               {children}
