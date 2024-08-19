@@ -1,18 +1,19 @@
 'use client'
 
-import {IconFlame} from "@tabler/icons-react";
+import {Card, CardBody, CardFooter, CardHeader, Image, ScrollShadow} from "@nextui-org/react";
 
 //TODO: change fonts later ;)
 
 export default function BlogTopPosts() {
     return (
         <div className="flex justify-start">
-            <div className="flex flex-col">
-                <div className="flex flex-row text-5xl">
+            <div className="flex flex-col gap-5">
+                <div className="flex flex-row text-3xl md:text-4xl xl:text-5xl">
                     <h2>Top rated posts</h2>
-                    <IconFlame stroke={1.5} className="size-12"/>
                 </div>
-                <div></div>
+               <div className="flex flex-row justify-evenly">
+                   <Card></Card>
+               </div>
             </div>
         </div>
     )

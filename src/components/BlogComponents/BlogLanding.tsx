@@ -32,8 +32,7 @@ export default function BlogLanding() {
                         <span>{"Latest blog post"}</span>
                         <span><IconNews stroke={1.5}/></span>
                     </div>
-                    <Card isHoverable isPressable
-                          className="animate-fade-down animate-delay-[600ms] border-1 border-gray-300 shadow-none">
+                    <Card isHoverable isPressable className="animate-fade-down animate-delay-[600ms] border-1 border-gray-300 shadow-none">
                         <CardHeader className="z-10 top-1 flex-col !items-start pb-0">
                             <h4 className="text-black font-medium text-2xl">Latest blog post title</h4>
                         </CardHeader>
