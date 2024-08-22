@@ -2,11 +2,9 @@
 import React from "react";
 import {
     Navbar,
-    NavbarBrand,
     NavbarContent,
     Button,
-    ButtonGroup,
-    Chip
+    ButtonGroup
 } from "@nextui-org/react";
 import {Link} from "react-scroll";
 import {IconFolders, IconMessages, IconPencil, IconUserCircle} from '@tabler/icons-react';

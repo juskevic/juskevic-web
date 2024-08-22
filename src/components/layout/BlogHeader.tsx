@@ -1,12 +1,11 @@
 'use client'
 import React from "react";
 import {
-    Navbar, NavbarContent, NavbarMenuToggle, NavbarMenu, NavbarMenuItem,
+    Navbar, NavbarContent, NavbarMenuToggle, NavbarMenu,
     Button,
     Breadcrumbs, BreadcrumbItem, Chip,
-    Input
 } from "@nextui-org/react";
-import {IconArrowBack, IconSearch,} from '@tabler/icons-react';
+import {IconArrowBack} from '@tabler/icons-react';
 
 //TODO: Make the search bar work, adjust fonts?
 
