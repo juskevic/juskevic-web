@@ -90,7 +90,6 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
             <body className={`${scp.className}`}>
                 <Providers>
                     {children}
-                    <Footer />
                 </Providers>
             </body>
         </html>

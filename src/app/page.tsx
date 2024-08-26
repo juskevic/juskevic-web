@@ -1,12 +1,10 @@
 'use client'
 import React, {useEffect} from 'react'
-import {Element, Events} from "react-scroll"
+import {Events} from "react-scroll"
 
-import Landing from "@/components/Landing";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import Main from "@/components/layout/Main";
 
 export default function Home() {
 
@@ -27,12 +25,12 @@ export default function Home() {
 
     return (
         <>
-            <Header />
-            <div className="pt-16 p-6 md:p-20 xl:p-36 space-y-64 md:space-y-[300px]">
-                <Landing/>
-                <Element name="about"><About/></Element>
-                <Element name="projects"><Projects/></Element>
-                <Element name="contact"><Contact/></Element>
+            <div className="p-6 md:p-20">
+                <Header/>
+                <div className="border-1 border-primary h-">
+                    <Main />
+                </div>
+                <Footer/>
             </div>
         </>
     );
