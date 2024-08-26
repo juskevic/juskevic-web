@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     publisher: "Max Juškevič",
     category: 'technology',
     icons: {
-      icon: '/favicon.ico',
+        icon: '/favicon.ico',
     },
     keywords: [
         "Frontend Development",
@@ -82,14 +82,14 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
-  return (
-      <html lang="en">
+    return (
+        <html lang="en">
         <body className={`${inter.className} light text-foreground inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]`}>
-          <Providers>
-              {children}
-              <Footer />
-          </Providers>
+        <Providers>
+            {children}
+            <Footer />
+        </Providers>
         </body>
-      </html>
-  );
+        </html>
+    );
 }
