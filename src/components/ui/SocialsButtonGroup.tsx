@@ -4,21 +4,21 @@ import {IconMail, IconBrandGithub, IconBrandLinkedin, IconBrandTelegram, IconBra
 
 export default function SocialsButtonGroup() {
     return (
-        <ButtonGroup size="md" variant="light">
+        <ButtonGroup size="md" variant="light" color="primary" radius="sm">
             <Button as="a" target="_blank" isIconOnly href="mailto:hello@juskevic.com">
-                <IconMail stroke={1.5} color="black"/>
+                <IconMail stroke={1.5}/>
             </Button>
             <Button as="a" target="_blank" isIconOnly href="https://github.com/juskevic">
-                <IconBrandGithub stroke={1.5} color="black"/>
+                <IconBrandGithub stroke={1.5}/>
             </Button>
             <Button as="a" target="_blank" isIconOnly href="https://www.linkedin.com/in/maxjuskevic/">
-                <IconBrandLinkedin stroke={1.5} color="black"/>
+                <IconBrandLinkedin stroke={1.5}/>
             </Button>
             <Button as="a" target="_blank" isIconOnly href="https://t.me/juskevic">
-                <IconBrandTelegram stroke={1.5} color="black"/>
+                <IconBrandTelegram stroke={1.5}/>
             </Button>
             <Button as="a" target="_blank" isIconOnly href="https://www.upwork.com/freelancers/~01f6c71aea76152016">
-                <IconBrandUpwork stroke={1.5} color="black"/>
+                <IconBrandUpwork stroke={1.5}/>
             </Button>
         </ButtonGroup>
     );
