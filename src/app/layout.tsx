@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import {Providers} from "@/app/providers";
+import { Source_Code_Pro } from 'next/font/google';
 
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const scp = Source_Code_Pro({
+    subsets: ['latin'],
+    weight: ['300'],
+});
 
 
 export const viewport: Viewport = {
@@ -83,13 +86,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html lang="en">
-        <body className={`${inter.className} light text-foreground inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]`}>
-        <Providers>
-            {children}
-            <Footer />
-        </Providers>
-        </body>
+        <html lang="en" className='dark'>
+            <body className={`${scp.className}`}>
+                <Providers>
+                    {children}
+                    <Footer />
+                </Providers>
+            </body>
         </html>
     );
 }
