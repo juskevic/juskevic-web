@@ -7,25 +7,6 @@ import { IconVolume } from '@tabler/icons-react';
 
 const COMMON_TEXT_COLOR = 'text-black';
 
-const caveat = Caveat({
-    weight: '400',
-    style: 'normal',
-    subsets: ['latin'],
-});
-
-const poppinsFont = Poppins({
-    weight: '500',
-    style: 'normal',
-    subsets: ['latin'],
-});
-
-const InterFont300 = Inter({
-    weight: '300',
-    style: 'normal',
-    subsets: ['latin'],
-});
-
-
 export default function Landing() {
 
     useEffect(() => {}, []);
@@ -43,7 +24,7 @@ export default function Landing() {
             <div className="flex flex-row justify-between max-w-screen-xl mx-auto md:pt-0 pt-20">
                 <div className="flex flex-col md:space-y-0 space-y-10">
                     <div className="max-w-screen-xl">
-                        <h1 className={`${poppinsFont.className} font-bold text-2xl md:text-4xl xl:text-6xl space-y-0.5`}>
+                        <h1 className={`font-bold text-2xl md:text-4xl xl:text-6xl space-y-0.5`}>
                             {/*{'Crafting web magic: responsive, user-friendly, and lightning-fast.'}*/}
                             <div className="animate-fade-down animate-delay-[200ms]">{"Crafting web magic: "}</div>
                             <div className="opacity-90 animate-fade-down animate-delay-[400ms]">{"responsive, user-friendly, "}</div>
@@ -53,13 +34,13 @@ export default function Landing() {
                     <div className="flex flex-col pt-10 md:pt-14 justify-start animate-fade-down animate-delay-[1000ms]">
                         <div>
                             <div className="w-[350px] md:w-[380px] xl:w-full pb-8">
-                                <p className={`${InterFont300.className} text-lg md:text-xl xl:text-2xl text-gray-600 animate-fade animate-delay-[2000ms]`}>
+                                <p className={`text-lg md:text-xl xl:text-2xl text-gray-600 animate-fade animate-delay-[2000ms]`}>
                                     <span>{"I love creating great user experiences through "}</span>
                                     <span className="bg-green-400 bg-opacity-20 rounded">{"UI and UX design."}</span>
                                 </p>
                             </div>
                             <div className="flex flex-row space-x-1">
-                                <h1 className={`${caveat.className} text-3xl sm:text-4xl ${COMMON_TEXT_COLOR}`}>
+                                <h1 className={`text-3xl sm:text-4xl ${COMMON_TEXT_COLOR}`}>
                                     {"Max Juškevič"}
                                 </h1>
                                 <audio
@@ -75,7 +56,7 @@ export default function Landing() {
                                     </Button>
                                 </Tooltip>
                             </div>
-                            <p className={`${InterFont300.className} text-gray-600 text-lg sm:text-xl ${COMMON_TEXT_COLOR} animate-fade-down animate-delay-[1200ms]`}>
+                            <p className={`text-gray-600 text-lg sm:text-xl ${COMMON_TEXT_COLOR} animate-fade-down animate-delay-[1200ms]`}>
                                 {"Frontend Engineer"}
                             </p>
                         </div>
