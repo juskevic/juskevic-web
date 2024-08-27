@@ -27,9 +27,7 @@ export default function Home() {
         <>
             <div className="p-6 md:p-20">
                 <Header/>
-                <div className="border-1 border-primary h-">
-                    <Main />
-                </div>
+                <Main />
                 <Footer/>
             </div>
         </>
