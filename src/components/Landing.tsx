@@ -8,11 +8,11 @@ export default function Landing() {
             <div className="flex justify-center items-center h-[60vh] md:h-[58vh] max-h-[60vh] md:max-h-[58vh]">
                 <div className="flex flex-row items-center">
                     <div>
-                        <h1 className=  "font-bold text-3xl md:text-4xl xl:text-7xl space-y-2 xl:text-center">
-                            <div className="animate-fade-down animate-delay-[200ms]">
+                        <h1 className="font-bold text-3xl md:text-4xl xl:text-7xl space-y-2 xl:text-center">
+                            <div className="animate-fade-down animate-once animate-duration-[2000ms] animate-ease-in-out">
                                 Bringing Ideas to Life
                             </div>
-                            <div className="opacity-90 animate-fade-down animate-delay-[400ms]">
+                            <div className="animate-fade-down animate-once animate-duration-[2000ms] animate-ease-in-out animate-delay-200">
                                 with <span className="text-secondary">Code</span> and <span className="text-secondary">Design</span>
                             </div>
                         </h1>

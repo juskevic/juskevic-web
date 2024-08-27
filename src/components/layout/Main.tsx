@@ -12,19 +12,18 @@ export default function Main() {
     return (
         <div className="border-1 border-primary rounded">
             <Tabs variant="underlined" radius="sm" size="lg">
-                <Tab key="landing" title="LANDING">
+                <Tab key="landing" title="LANDING" className="animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out">
                     <Landing/>
                 </Tab>
-                <Tab key="about" title="ABOUT">
+                <Tab key="about" title="ABOUT" className="animate-fade-right animate-once animate-duration-[2000ms] animate-delay-200 animate-ease-in-out">
                     <About/>
                 </Tab>
-                <Tab key="projects" title="PROJECTS">
+                <Tab key="projects" title="PROJECTS" className="animate-fade-right animate-once animate-duration-[2000ms] animate-delay-300 animate-ease-in-out">
                     <Projects />
                 </Tab>
-                <Tab key="contact" title="CONTACT">
+                <Tab key="contact" title="CONTACT" className="animate-fade-right animate-once animate-duration-[2000ms] animate-delay-500 animate-ease-in-out">
                     <Contact/>
                 </Tab>
-                <Tab isDisabled key="blog" title="BLOG"></Tab>
             </Tabs>
         </div>
     )
