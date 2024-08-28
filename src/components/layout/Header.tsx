@@ -16,8 +16,7 @@ export default function Header() {
     const currentDateTime = calculatePragueDateTime();
 
     return (
-        <header
-            className="md:text-xl flex justify-between p-5 bg-black animate-fade animate-once animate-duration-[3000ms] animate-ease-in-out">
+        <header className="md:text-xl flex justify-between p-5 bg-black animate-fade animate-once animate-duration-[3000ms] animate-ease-in-out">
             <div className="flex flex-col md:flex-row md:gap-20">
                 <p className="text-primary text-xl">MAX JUŠKEVIČ</p>
                 <div className="flex flex-row gap-1">
