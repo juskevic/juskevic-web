@@ -1,9 +1,13 @@
 'use client'
-import React, {useEffect, useRef} from 'react';
-import {Accordion, AccordionItem, Card, CardBody, CardHeader, Chip, ScrollShadow, Tab, Tabs} from "@nextui-org/react";
-import {IconBrandHtml5, IconBrandReact, IconBrandJavascript, IconBrandCss3, IconBrandBootstrap, IconBrandNextjs, IconBrandTailwind, IconBrandFramerMotion, IconBrandNodejs, IconBrandGit, IconBrandNpm, IconSparkles, IconClock, IconNotes, IconCode, IconBrandTypescript} from "@tabler/icons-react"
-
-import ReadMyStoryModal from "@/components/ui/ReadMyStoryModal";
+import React from 'react';
+import {
+    Accordion, AccordionItem,
+    Card, CardBody, CardHeader,
+    Chip,
+    Progress,
+    ScrollShadow,
+    Tab, Tabs
+} from "@nextui-org/react";
 
 interface AboutProps {
     id?: string;
@@ -13,30 +17,56 @@ const About: React.FC<AboutProps> = ({}) => {
 
     return (
         <>
-            <div className="flex justify-start p-6 h-[60vh] md:h-[58vh] max-h-[60vh] md:max-h-[58vh]">
-                <ScrollShadow orientation="horizontal" className="flex flex-row max-w-[600px]">
-                    <Card className="" radius="sm">
-                        <CardHeader className="z-10 flex-row justify-between font-medium text-2xl md:text-3xl xl:text-4xl">
-                            <div className="inline">
-                                <span>{"Hello."}</span>
-                            </div>
-                            <div>
-                                <ReadMyStoryModal />
-                            </div>
-                        </CardHeader>
-                        <CardBody className="text-xl md:text-2xl inline">
-                            <span>{"I’m Max, a "}</span>
-                            <span className="bg-green-400 bg-opacity-20 rounded">{"self-taught"}</span>
-                            <span>{" Frontend Engineer with a passion for UI and UX design. My expertise lies in creating seamless web experiences using technologies like "}</span>
-                            <span className="bg-cyan-700 bg-opacity-20 rounded">{"React"}</span>
-                            <span>{", "}</span>
-                            <span className="bg-blue-600 bg-opacity-20 rounded">{" TypeScript"}</span>
-                            <span>{" and "}</span>
-                            <span className="bg-gray-800 bg-opacity-20 rounded">{"NEXT"}</span>
-                            <span>{"."}</span>
-                            <span>{" From optimizing performance to crafting elegant interfaces, I’m dedicated to enhancing user interactions."}</span>
-                        </CardBody>
-                    </Card>
+            <div className="flex justify-start p-3 text-wrap md:p-6 h-[60vh] md:h-[58vh] max-h-[60vh] md:max-h-[58vh]">
+                <ScrollShadow hideScrollBar>
+                    <div className="flex flex-col xl:flex-row justify-evenly">
+                        <Card className="shadow-none bg-background xl:w-1/2" radius="sm">
+                            <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
+                                <div className="inline">
+                                    <span>{"Hello."}</span>
+                                </div>
+                            </CardHeader>
+                            <CardBody className="text-xl md:text-2xl">
+                                <p>
+                                    {"I’m Max, a self-taught Frontend Engineer with a passion for UI and UX design. My expertise lies in creating seamless web experiences using technologies like React, TypeScript and NEXT. From optimizing performance to crafting elegant interfaces, I’m dedicated to enhancing user interactions."}
+                                </p>
+                            </CardBody>
+                        </Card>
+                        <Card className="shadow-none bg-background" radius="sm">
+                            <CardHeader className="z-10 flex-row justify-between">
+                                <div className="flex flex-col">
+                                    <p className={`text-lg text-secondary`}>
+                                        The tools behind stunning interfaces
+                                    </p>
+                                    <h2 className="font-medium text-3xl md:text-4xl xl:text-5xl">
+                                        {"Tech Stack"}
+                                    </h2>
+                                </div>
+                            </CardHeader>
+                            <CardBody className="pt-0">
+                                <Tabs size="lg" variant="underlined">
+                                    <Tab title={<span className="text-medium md:text-lg">Frontend</span>}>
+                                        <ScrollShadow hideScrollBar className="flex flex-col gap-3 w-full max-w-md overflow-y-auto max-h-[300px]">
+                                            <Progress radius="none" label="HTML" value={90}/>
+                                            <Progress radius="none" label="CSS" value={80}/>
+                                            <Progress radius="none" label="JavaScript" value={75}/>
+                                            <Progress radius="none" label="Tailwind" value={70}/>
+                                            <Progress radius="none" label="TypeScript" value={68}/>
+                                            <Progress radius="none" label="React" value={65}/>
+                                            <Progress disableAnimation radius="none" label="Next.js" value={60}/>
+                                            <Progress disableAnimation radius="none" label="Next.js" value={60}/>
+                                            <Progress disableAnimation radius="none" label="React Native" value={47}/>
+                                            <Progress disableAnimation radius="none" label="Expo" value={46}/>
+                                            <Progress disableAnimation radius="none" label="Bootstrap" value={45}/>
+                                            <Progress disableAnimation radius="none" label="Framer Motion" value={25}/>
+                                        </ScrollShadow>
+                                    </Tab>
+                                    <Tab title={<span className="text-medium md:text-lg">Other</span>}>
+                                    </Tab>
+                                </Tabs>
+                            </CardBody>
+                        </Card>
+                    </div>
                 </ScrollShadow>
             </div>
         </>
