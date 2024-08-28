@@ -18,14 +18,14 @@ export default function Header() {
     return (
         <header
             className="md:text-xl flex justify-between p-5 bg-black animate-fade animate-once animate-duration-[3000ms] animate-ease-in-out">
-            <div className="flex flex-row gap-20">
-                <p className="text-primary">MAX JUŠKEVIČ</p>
+            <div className="flex flex-col md:flex-row md:gap-20">
+                <p className="text-primary text-xl">MAX JUŠKEVIČ</p>
                 <div className="flex flex-row gap-1">
                     <Link underline="hover" href="/" className="text-secondary text-xl">DOWNLOAD CV</Link>
                     <IconFileDownload className="text-secondary" stroke={1.5}/>
                 </div>
             </div>
-            <div className="flex flex-row gap-1">
+            <div className="hidden xl:flex flex-row gap-1">
                 <IconPointFilled
                     className="animate-ping animate-infinite animate-duration-[1500ms] animate-ease-linear text-green-500 my-auto"/>
                 <p className="text-primary">

@@ -7,10 +7,10 @@ export default function ReadMyStoryModal() {
 
     return (
         <>
-            <Button onPress={onOpen} radius="full" variant="light" className={`border-1 border-gray-800 shadow-none bg-white text-medium md:text-lg`}>
+            <Button onPress={onOpen} radius="sm" variant="ghost" className={`shadow-none text-medium md:text-lg`}>
                 Read my story
             </Button>
-            <Modal className="outline-2 outline-black outline" hideCloseButton size="2xl" placement="center" isOpen={isOpen} onOpenChange={onOpenChange}>
+            <Modal className="outline-2 outline-black outline" hideCloseButton size="2xl" radius="sm" placement="center" isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent>
                     {(onClose) => (
                         <>
@@ -49,7 +49,7 @@ export default function ReadMyStoryModal() {
                                 </ScrollShadow>
                             </ModalBody>
                             <ModalFooter>
-                                <Button className={`border-1 border-gray-800 shadow-none bg-white text-medium md:text-lg`} variant="ghost" onPress={onClose} radius="full">
+                                <Button className={`shadow-none ext-medium md:text-lg`} variant="ghost" onPress={onClose} radius="full">
                                     Close
                                 </Button>
                             </ModalFooter>
