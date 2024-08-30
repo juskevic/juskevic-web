@@ -25,8 +25,7 @@ export default function Header() {
                 </div>
             </div>
             <div className="hidden xl:flex flex-row gap-1">
-                <IconPointFilled
-                    className="animate-ping animate-infinite animate-duration-[1500ms] animate-ease-linear text-green-500 my-auto"/>
+                <IconPointFilled className="animate-ping animate-infinite animate-duration-[1500ms] animate-ease-linear text-success my-auto"/>
                 <p className="text-primary">
                     <span>{"PRAGUE, CZECHIA "}</span><span>{currentDateTime}</span>
                 </p>
