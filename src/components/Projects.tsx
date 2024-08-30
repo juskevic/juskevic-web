@@ -1,121 +1,138 @@
 'use client'
-import React, {useEffect, useRef} from 'react';
-import {Card, CardHeader, CardBody, Button, Tabs, Tab, Image, Chip} from "@nextui-org/react";
+import React from 'react';
+import {Card, CardHeader, CardBody, Button, Tabs, Tab, Image, Chip, ScrollShadow} from "@nextui-org/react";
 import {IconBrandGithub, IconArrowUpRight, IconBrandGooglePlay, IconBrandAppstore, IconAlertCircle} from "@tabler/icons-react";
+import CardWrapper from "@/components/ui/CardWrapper";
 
-const Projects = () => {
-
-    const AnimateDivProjects1 = useRef(null);
-    const AnimateDivProjects2 = useRef(null);
-
-    useEffect(() => {
-        let observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-down', 'animate-once');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        if (AnimateDivProjects1.current) observer.observe(AnimateDivProjects1.current);
-        if (AnimateDivProjects2.current) observer.observe(AnimateDivProjects2.current);
-
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
-
-    const cardClassName = "shadow-none bg-opacity-25 xl:w-1/2"
-
+export default function Projects() {
     return (
-        <>
-            <div className="flex justify-center">
-                <div className="flex flex-col">
-                    <div className="flex flex-col xl:flex-row justify-evenly xl:h-[500px]">
-                        <Card ref={AnimateDivProjects1} className={cardClassName}>
-                            <CardHeader className="flex gap-3 pb-1">
-                                <Image
-                                    className="outline-2 outline outline-neutral-600"
-                                    alt="portfolio website logo"
-                                    height={50}
-                                    radius="md"
-                                    src="/favicon.ico"
-                                    width={50}
-                                />
-                                <div className="flex flex-col">
-                                    <p className="text-2xl">Portfolio Website</p>
-                                    <p className="text-lg text-gray-600">Website</p>
-                                </div>
-                            </CardHeader>
-                            <CardBody className="pt-0">
-                                <Tabs size="md" variant="underlined">
-                                    <Tab title={<span className="text-medium md:text-lg">Description</span>}>
-                                        <p className="text-medium md:text-lg">
-                                            My portfolio website is the first front-end project I have
-                                            undertaken. Initially developed using basic HTML and CSS, it has
-                                            since been enhanced with the use of modern frameworks such as
-                                            Next.js and React. It incorporates multiple JavaScript libraries to
-                                            achieve a contemporary look and feel. I am delighted with the result
-                                            and continue to work on it to this day, despite having made over 500
-                                            commits.
+        <ScrollShadow hideScrollBar={true} className="flex flex-col justify-start p-3 text-wrap md:p-6 h-[60vh] md:h-[58vh] max-h-[60vh] md:max-h-[58vh] overflow-y-auto xl:flex-row xl:overflow-x-auto xl:overflow-y-hidden">
+            <div className="flex flex-col xl:flex-row xl:space-x-4 space-y-4 xl:space-y-0">
+                <CardWrapper>
+                    <Card className="shadow-none bg-background animate-fade-right animate-once" radius="sm">
+                        <CardHeader className="flex gap-3 pb-1 font-medium text-xl md:text-2xl xl:text-3xl">
+                            <Image
+                                className="outline-1 outline outline-secondary"
+                                alt="portfolio website logo"
+                                height={50}
+                                radius="md"
+                                src="/icon.webp"
+                                width={50}
+                            />
+                            <div className="flex flex-col">
+                                <p className="text-primary">Portfolio Website</p>
+                                <p className="text-secondary text-lg md:text-xl xl:text-2xl">Website</p> {/* Size has to be adjusted according to <CardHeader> */}
+                            </div>
+                        </CardHeader>
+                        <CardBody className="pt-0">
+                            <Tabs size="md" variant="underlined">
+                                <Tab title={<span className="text-medium md:text-lg">Description</span>}>
+                                    <ScrollShadow size={50}>
+                                        <p className="text-lg md:text-xl md:h-full h-[250px]">
+                                            {"My portfolio website was my very first front-end project. I started with basic HTML and CSS, but it has evolved significantly since then. Now, it's powered by modern frameworks like Next.js and React, and enhanced with various JavaScript libraries for a sleek, contemporary design. With over 800 commits so far, I continue to use this site as a testing ground for new technologies, constantly improving and refining it."}
                                         </p>
-                                    </Tab>
-                                    <Tab title={<span className="text-medium md:text-lg">Preview</span>}>
-                                        <Image isZoomed height={300} src="" alt="preview image"></Image>
-                                    </Tab>
-                                    <Tab title={<span className="text-medium md:text-lg">Links</span>}>
-                                        <div className="space-x-3 space-y-3 md:flex-row xl:flex-col flex-col">
-                                            <Button as="a" href="https://github.com/juskevic/portfolio-website" className="border-1 border-gray-800 shadow-none bg-white text-medium" radius="md" variant="ghost" size="sm" endContent={<IconBrandGithub stroke={1.5}/>}>
-                                                source-code
-                                            </Button>
-                                        </div>
-                                    </Tab>
-                                </Tabs>
-                            </CardBody>
-                        </Card>
-                        <Card ref={AnimateDivProjects2} className={cardClassName}>
-                            <CardHeader className="flex gap-3 pb-1">
-                                <Image alt="vycetka logo" height={50} radius="md" src="vycetkaLogo.png" width={50}/>
+                                    </ScrollShadow>
+                                </Tab>
+                                <Tab title={<span className="text-medium md:text-lg">Links</span>}>
+                                    <div className="space-x-3 space-y-3 md:flex-row xl:flex-col flex-col">
+                                        <Button
+                                            as="a"
+                                            href="https://github.com/juskevic/juskevic-web"
+                                            className="text-lg"
+                                            radius="sm"
+                                            variant="bordered"
+                                            size="sm"
+                                            endContent={<IconBrandGithub stroke={1.5}/>}
+                                        >
+                                            source-code
+                                        </Button>
+                                    </div>
+                                </Tab>
+                            </Tabs>
+                        </CardBody>
+                    </Card>
+                </CardWrapper>
+                <CardWrapper>
+                    <Card className="shadow-none bg-background animate-fade-right animate-once animate-delay-1000" radius="sm">
+                        <CardHeader className="flex gap-3 pb-1 font-medium text-xl md:text-2xl xl:text-3xl">
+                            <Image
+                                className="outline-1 outline outline-secondary"
+                                alt="vycetka logo"
+                                height={50}
+                                radius="md"
+                                src="vycetkaLogo.png"
+                                width={50}
+                            />
                                 <div className="flex flex-col">
-                                    <p className="text-2xl">Výčetka</p>
-                                    <p className="text-lg text-gray-600">Android, iOS</p>
+                                    <p className="text-primary">Výčetka</p>
+                                    <p className="text-secondary text-lg md:text-xl xl:text-2xl">Android, iOS</p>
                                 </div>
-                            </CardHeader>
-                            <CardBody className="pt-0">
-                                <Tabs size="md" variant="underlined">
-                                    <Tab title={<span className="text-medium md:text-lg">Description</span>}>
-                                        <p className="text-medium md:text-lg">
+                        </CardHeader>
+                        <CardBody className="pt-0">
+                            <Tabs size="md" variant="underlined">
+                                <Tab title={<span className="text-medium md:text-lg">Description</span>}>
+                                    <ScrollShadow>
+                                        <p className="text-lg md:text-xl md:h-full h-[250px]">
                                             {"Vyčetka is a mobile app built with Expo, React Native, and React Native Paper UI. It quickly and accurately counts banknotes and coins, originally starting as a web app with Bootstrap. Now, it's a handy way to manage currency denominations on the go. 💰📱"}
                                         </p>
-                                    </Tab>
-                                    <Tab title={<span className="text-medium md:text-lg">Preview</span>}>
-                                        <Image width={500} src="/vycetka_preview_1.png" alt="preview image"></Image>
-                                    </Tab>
-                                    <Tab title={<span className="text-medium md:text-lg">Links</span>}>
-                                        <div className="space-x-3 space-y-3 md:flex-row xl:flex-col flex-col pb-5">
-                                            <Button as="a" href="https://vycetka.juskevic.com/" className="border-1 border-gray-800 shadow-none bg-white text-medium" radius="md" variant="ghost" size="sm" endContent={<IconArrowUpRight stroke={1.5}/>}>
-                                                website
-                                            </Button>
-                                            <Button isDisabled={true} as="a" href="" className="border-1 border-gray-800 shadow-none bg-white text-medium" radius="md" variant="ghost" size="sm" endContent={<IconBrandAppstore stroke={1.5}/>}>
-                                                app store
-                                            </Button>
-                                            <Button isDisabled={true} as="a" href="" className="border-1 border-gray-800 shadow-none bg-white text-medium" radius="md" variant="ghost" size="sm" endContent={<IconBrandGooglePlay stroke={1.5}/>}>
-                                                google play
-                                            </Button>
-                                        </div>
-                                        <Chip className="!text-center" startContent={<IconAlertCircle stroke={1.5}/>} color="warning" variant="flat">This project is currently under development.</Chip>
-                                    </Tab>
-                                </Tabs>
-                            </CardBody>
-                        </Card>
-                    </div>
-                    <div className="flex flex-row"></div>
-                </div>
+                                    </ScrollShadow>
+                                </Tab>
+                                <Tab title={<span className="text-medium md:text-lg">Preview</span>}>
+                                    <Image width={500} src="/vycetka_preview_1.png" alt="preview image"></Image>
+                                </Tab>
+                                <Tab title={<span className="text-medium md:text-lg">Links</span>}>
+                                    <div className="space-x-3 space-y-3 md:flex-row xl:flex-col flex-col pb-5">
+                                        <Button
+                                            as="a"
+                                            href="#"
+                                            className="text-medium"
+                                            radius="sm"
+                                            variant="bordered"
+                                            size="sm"
+                                            endContent={<IconArrowUpRight stroke={1.5}/>}
+                                        >
+                                            website
+                                        </Button>
+                                        <Button
+                                            isDisabled={true}
+                                            as="a"
+                                            href="#"
+                                            className="text-medium"
+                                            radius="sm"
+                                            variant="bordered"
+                                            size="sm"
+                                            endContent={<IconBrandGooglePlay stroke={1.5}/>}
+                                        >
+                                            google play
+                                        </Button>
+                                        <Button
+                                            isDisabled={true}
+                                            as="a"
+                                            href="#"
+                                            className="text-medium"
+                                            radius="sm"
+                                            variant="bordered"
+                                            size="sm"
+                                            endContent={<IconBrandAppstore stroke={1.5}/>}
+                                        >
+                                            app store
+                                        </Button>
+                                    </div>
+                                    <Chip
+                                        className="!text-center"
+                                        startContent={<IconAlertCircle stroke={1.5}/>}
+                                        color="warning"
+                                        variant="flat"
+                                        radius="sm"
+                                    >
+                                        This project is currently under development.
+                                    </Chip>
+                                </Tab>
+                            </Tabs>
+                        </CardBody>
+                    </Card>
+                </CardWrapper>
             </div>
-        </>
-    );
-};
-
-
-export default Projects;
+        </ScrollShadow>
+    )
+}

@@ -6,7 +6,7 @@ interface CardWrapperProps {
 
 const CardWrapper: React.FC<CardWrapperProps> = ({ children }) => {
     return (
-        <div className="xl:flex-grow-0 xl:flex-shrink-0 xl:w-[500px] mr-4">
+        <div className="xl:flex-grow-0 xl:flex-shrink-0 xl:w-[600px] xl:mr-4">
             {children}
         </div>
     );

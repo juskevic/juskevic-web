@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import {
-    Accordion, AccordionItem,
     Card, CardBody, CardHeader,
     Progress,
     ScrollShadow,
@@ -20,23 +19,27 @@ const About: React.FC<AboutProps> = ({}) => {
             <ScrollShadow hideScrollBar className="flex flex-col justify-start p-3 text-wrap md:p-6 h-[60vh] md:h-[58vh] max-h-[60vh] md:max-h-[58vh] overflow-y-auto xl:flex-row xl:overflow-x-auto xl:overflow-y-hidden">
                 <div className="flex flex-col xl:flex-row xl:space-x-4 space-y-4 xl:space-y-0">
                     <CardWrapper>
-                        <Card className="shadow-none bg-background animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out" radius="sm">
+                        <Card className="shadow-none bg-background animate-fade-right animate-once" radius="sm">
                             <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
                                 <div className="inline">
                                     <span>{"Hello."}</span>
                                 </div>
                             </CardHeader>
-                            <CardBody className="text-xl md:text-2xl">
-                                <p>
-                                    {"I’m a self-taught Frontend Engineer who loves designing and building user-friendly websites. I specialize in making web pages look great and work smoothly, using tools like React, TypeScript, and NEXT. Whether it’s improving website speed or creating easy-to-use interfaces, I’m all about making the web a better place for everyone."}
-                                </p>
+                            <CardBody>
+                                <ScrollShadow>
+                                    <p className="text-lg md:text-2xl md:h-full h-[250px]">
+                                        {"I’m a self-taught Frontend Engineer who loves designing and building user-friendly websites. I specialize in making web pages look great and work smoothly, using tools like React, TypeScript, and NEXT. Whether it’s improving website speed or creating easy-to-use interfaces, I’m all about making the web a better place for everyone."}
+                                    </p>
+                                </ScrollShadow>
                             </CardBody>
                         </Card>
                     </CardWrapper>
                     <CardWrapper>
-                        <Card className="shadow-none bg-background animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out animate-delay-500" radius="sm">
-                            <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
-                                <div className="inline">
+                        <Card className="shadow-none bg-background animate-fade-right animate-once animate-delay-500"
+                              radius="sm">
+                            <CardHeader
+                                className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
+                            <div className="inline">
                                     <span>{"Tech Stack"}</span>
                                 </div>
                             </CardHeader>
