@@ -20,7 +20,7 @@ const About: React.FC<AboutProps> = ({}) => {
             <ScrollShadow hideScrollBar className="flex flex-col justify-start p-3 text-wrap md:p-6 h-[60vh] md:h-[58vh] max-h-[60vh] md:max-h-[58vh] overflow-y-auto xl:flex-row xl:overflow-x-auto xl:overflow-y-hidden">
                 <div className="flex flex-col xl:flex-row xl:space-x-4 space-y-4 xl:space-y-0">
                     <CardWrapper>
-                        <Card className="shadow-none bg-background w-full" radius="sm">
+                        <Card className="shadow-none bg-background w-full animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out" radius="sm">
                             <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
                                 <div className="inline">
                                     <span>{"Hello."}</span>
@@ -34,7 +34,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         </Card>
                     </CardWrapper>
                     <CardWrapper>
-                        <Card className="shadow-none bg-background w-full" radius="sm">
+                        <Card className="shadow-none bg-background animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out animate-delay-500" radius="sm">
                             <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
                                 <div className="inline">
                                     <span>{"Tech Stack"}</span>
@@ -71,7 +71,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         </Card>
                     </CardWrapper>
                     <CardWrapper>
-                        <Card className="shadow-none bg-background w-full" radius="sm">
+                        <Card className="shadow-none bg-background animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out animate-delay-700" radius="sm">
                             <CardHeader className="z-10 flex-col !items-start">
                                 <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
                                     <div className="inline">
