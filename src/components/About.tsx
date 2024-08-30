@@ -20,7 +20,7 @@ const About: React.FC<AboutProps> = ({}) => {
             <ScrollShadow hideScrollBar className="flex flex-col justify-start p-3 text-wrap md:p-6 h-[60vh] md:h-[58vh] max-h-[60vh] md:max-h-[58vh] overflow-y-auto xl:flex-row xl:overflow-x-auto xl:overflow-y-hidden">
                 <div className="flex flex-col xl:flex-row xl:space-x-4 space-y-4 xl:space-y-0">
                     <CardWrapper>
-                        <Card className="shadow-none bg-background w-full animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out" radius="sm">
+                        <Card className="shadow-none bg-background animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out" radius="sm">
                             <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
                                 <div className="inline">
                                     <span>{"Hello."}</span>
@@ -67,30 +67,6 @@ const About: React.FC<AboutProps> = ({}) => {
                                         </ScrollShadow>
                                     </Tab>
                                 </Tabs>
-                            </CardBody>
-                        </Card>
-                    </CardWrapper>
-                    <CardWrapper>
-                        <Card className="shadow-none bg-background animate-fade-right animate-once animate-duration-[2000ms] animate-ease-in-out animate-delay-700" radius="sm">
-                            <CardHeader className="z-10 flex-col !items-start">
-                                <CardHeader className="z-10 flex-row justify-between font-medium text-3xl md:text-4xl xl:text-5xl">
-                                    <div className="inline">
-                                        <span>{"Learn more about me."}</span>
-                                    </div>
-                                </CardHeader>
-                            </CardHeader>
-                            <CardBody>
-                                <Accordion isCompact showDivider={false}>
-                                    <AccordionItem aria-label="Accordion 1" title={<span className="text-xl md:text-2xl">What inspires you?</span>}>
-                                        {"I find inspiration in solving problems, creating interfaces, and learning new things. Reading and music also influence my creativity. People like Steve Jobs and books such as \"Don’t Make Me Think\" have shaped my perspective. So has the open-source community."}
-                                    </AccordionItem>
-                                    <AccordionItem aria-label="Accordion 2" title={<span className="text-xl md:text-2xl">How do you spend your free time?</span>}>
-                                        {"Outside of my digital life, I enjoy cycling, reading, and listening to music. These activities help me relax and reflect. They’re my escape from screens and algorithms."}
-                                    </AccordionItem>
-                                    <AccordionItem aria-label="Accordion 3" title={<span className="text-xl md:text-2xl">What are you currently learning?</span>}>
-                                        {"I'm currently learning the ins and outs of mobile app development using tools like React Native, Expo, and Firebase."}
-                                    </AccordionItem>
-                                </Accordion>
                             </CardBody>
                         </Card>
                     </CardWrapper>
