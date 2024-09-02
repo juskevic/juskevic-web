@@ -77,14 +77,19 @@ const config: Config = {
       },
     }),
     require('tailwindcss-animated'),
-    // Custom plugin with TypeScript types for addUtilities
     function ({ addUtilities }: PluginAPI) {
       const newUtilities = {
         '.hollow-text': {
           color: 'transparent',
-          '-webkit-text-stroke': '3px #333333',
+          '-webkit-text-stroke': '2px #333333',
+        },
+        '@screen sm': {
+          '.hollow-text': {
+            '-webkit-text-stroke': '3px #333333',
+          },
         },
       };
+
       addUtilities(newUtilities);
     },
   ],

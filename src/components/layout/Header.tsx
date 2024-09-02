@@ -10,7 +10,7 @@ import {
     Button,
     ButtonGroup
 } from "@nextui-org/react";
-import {IconFileDownload} from "@tabler/icons-react";
+import {IconAddressBook, IconBriefcase, IconFileDownload, IconUserCircle} from "@tabler/icons-react";
 
 export default function App() {
 
@@ -28,20 +28,20 @@ export default function App() {
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
                     <ButtonGroup>
-                        <Button className="text-lg" variant="light" color="default">
+                        <Button className="text-lg font-bold" variant="light" color="default" endContent={<IconUserCircle stroke={1.5}/>}>
                             About
                         </Button>
-                        <Button className="text-lg" variant="light" color="default">
+                        <Button className="text-lg font-bold" variant="light" color="default" endContent={<IconBriefcase stroke={1.5}/>}>
                             Projects
                         </Button>
-                        <Button className="text-lg" variant="light" color="default">
+                        <Button className="text-lg font-bold" variant="light" color="default" endContent={<IconAddressBook stroke={1.5}/>}>
                             Contact
                         </Button>
                     </ButtonGroup>
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
-                <NavbarItem className="hidden lg:flex">
+                <NavbarItem>
                     <Button
                         className="text-lg"
                         as={Link}
@@ -51,11 +51,6 @@ export default function App() {
                         endContent={<IconFileDownload stroke={1.5}/>}
                     >
                        CV
-                    </Button>
-                </NavbarItem>
-                <NavbarItem>
-                    <Button className="text-lg" color="primary" href="#" variant="flat">
-                        Get in Touch
                     </Button>
                 </NavbarItem>
             </NavbarContent>

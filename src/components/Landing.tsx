@@ -13,15 +13,15 @@ export default function Landing() {
 
     return (
         <>
-            <div className="flex justify-start flex-col xl:gap-14">
-                <div className={`${archivoBlack.className} flex flex-col text-foreground xl:text-9xl`}>
+            <div className="flex justify-start flex-col gap-8 md:gap-10 xl:gap-14">
+                <div className={`${archivoBlack.className} flex flex-col text-foreground text-6xl md:text-8xl xl:text-9xl`}>
                     <div><p className="hollow-text hover:text-primary-100 transition">{"MAX"}</p></div>
                     <div><p className="hollow-text hover:text-primary-100 transition">{"JUŠKEVIČ"}</p></div>
                 </div>
-                <div className="flex xl:text-6xl text-foreground">
-                    <p>{"Web Developer"}</p>
+                <div className="flex text-3xl md:text-5xl xl:text-6xl text-foreground">
+                    <p>{"Frontend Engineer"}</p>
                 </div>
-                <div className="flex xl:text-2xl w-1/2">
+                <div className="flex text-lg md:text-xl xl:text-2xl md:w-2/3 xl:w-1/2">
                     <p>
                         {"I'm a passionate Web Developer specializing in creating dynamic and user-friendly websites and applications. With a focus on modern frontend technologies, I deliver high-quality code and engaging user experiences."}
                     </p>
@@ -33,7 +33,7 @@ export default function Landing() {
                             size="md"
                             variant="flat"
                             color="primary"
-                            className="text-lg font-"
+                            className="text-lg"
                         >
                             {"Get in Touch"}
                         </Button>
