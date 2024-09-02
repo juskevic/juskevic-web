@@ -2,6 +2,7 @@
 import React, {useEffect} from 'react'
 import {Events} from "react-scroll"
 import Landing from "@/components/Landing";
+import About from "@/components/About";
 
 
 export default function Home() {
@@ -25,10 +26,11 @@ export default function Home() {
         <>
             <div
                 className="
-                xl:p-48
-                top-0 z-[-2] h-screen w-screen bg-background bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"
+                xl:p-44 space-y-80
+                bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"
             >
                 <Landing/>
+                <About/>
             </div>
         </>
     );
