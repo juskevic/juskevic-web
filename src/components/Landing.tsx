@@ -2,7 +2,7 @@
 import React from 'react';
 import {Archivo_Black} from "next/font/google";
 import SocialsButtonGroup from "@/components/ui/SocialsButtonGroup";
-import {Button} from "@nextui-org/react";
+import {Button, Chip} from "@nextui-org/react";
 
 const archivoBlack = Archivo_Black({
     subsets: ['latin'],
@@ -14,7 +14,8 @@ export default function Landing() {
     return (
         <>
             <div className="flex justify-start flex-col gap-8 md:gap-10 xl:gap-14">
-                <div className={`${archivoBlack.className} flex flex-col text-foreground text-6xl md:text-8xl xl:text-9xl`}>
+                <div
+                    className={`${archivoBlack.className} flex flex-col text-foreground text-6xl md:text-8xl xl:text-9xl`}>
                     <div><p className="hollow-text hover:text-primary-100 transition">{"MAX"}</p></div>
                     <div><p className="hollow-text hover:text-primary-100 transition">{"JUŠKEVIČ"}</p></div>
                 </div>
@@ -38,6 +39,11 @@ export default function Landing() {
                             {"Get in Touch"}
                         </Button>
                     </div>
+                </div>
+                <div>
+                    <Chip size="lg" color="warning" variant="flat">
+                        {"Website is under construction! ⚒️"}
+                    </Chip>
                 </div>
             </div>
         </>
