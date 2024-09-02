@@ -27,14 +27,14 @@ export default function App() {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <ButtonGroup>
-                        <Button className="text-lg font-bold" variant="light" color="default" endContent={<IconUserCircle stroke={1.5}/>}>
+                    <ButtonGroup variant="flat" color="default">
+                        <Button className="text-lg font-bold" endContent={<IconUserCircle stroke={1.5}/>}>
                             About
                         </Button>
-                        <Button className="text-lg font-bold" variant="light" color="default" endContent={<IconBriefcase stroke={1.5}/>}>
+                        <Button className="text-lg font-bold" endContent={<IconBriefcase stroke={1.5}/>}>
                             Projects
                         </Button>
-                        <Button className="text-lg font-bold" variant="light" color="default" endContent={<IconAddressBook stroke={1.5}/>}>
+                        <Button className="text-lg font-bold" endContent={<IconAddressBook stroke={1.5}/>}>
                             Contact
                         </Button>
                     </ButtonGroup>

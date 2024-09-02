@@ -27,7 +27,7 @@ export default function Home() {
             <div
                 className="
                 p-6 md:p-20 xl:p-32 2xl:p-44 space-y-80
-                bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"
+                inset-0 -z-10 bg-ghostwhite bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
             >
                 <Landing/>
                 <About/>
@@ -37,5 +37,5 @@ export default function Home() {
 }
 
 /*
-absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]
+<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 */
