@@ -1,6 +1,6 @@
 import React from "react";
 import {Button, ButtonGroup} from "@nextui-org/react";
-import {IconMail, IconBrandGithub, IconBrandLinkedin, IconBrandTelegram, IconBrandUpwork} from '@tabler/icons-react';
+import {IconMail, IconBrandGithub, IconBrandLinkedin, IconBrandUpwork} from '@tabler/icons-react';
 
 export default function SocialsButtonGroup() {
     return (

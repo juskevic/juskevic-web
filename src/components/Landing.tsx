@@ -1,8 +1,9 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Archivo_Black} from "next/font/google";
 import SocialsButtonGroup from "@/components/ui/SocialsButtonGroup";
 import {Button} from "@nextui-org/react";
+import { motion } from 'framer-motion';
 
 const archivoBlack = Archivo_Black({
     subsets: ['latin'],
@@ -11,13 +12,50 @@ const archivoBlack = Archivo_Black({
 
 export default function Landing() {
 
+    const [hasAnimated, setHasAnimated] = useState(false);
+
+    useEffect(() => {
+        // Ensure the animation only runs once per page load
+        if (!hasAnimated) {
+            setHasAnimated(true);
+        }
+    }, [hasAnimated]);
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: 'easeOut',
+                when: 'beforeChildren',
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    const textVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
         <>
             <div className="flex justify-start flex-col gap-8 md:gap-10 xl:gap-14">
-                <div className={`${archivoBlack.className} flex flex-col text-foreground text-6xl md:text-8xl xl:text-9xl`}>
-                    <div><p className="hollow-text hover:text-primary-100 transition">{"MAX"}</p></div>
-                    <div><p className="hollow-text hover:text-primary-100 transition">{"JUŠKEVIČ"}</p></div>
-                </div>
+                <motion.div
+                    className={`${archivoBlack.className} flex flex-col text-foreground text-6xl md:text-8xl xl:text-9xl`}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={hasAnimated ? 'visible' : 'hidden'}
+                >
+                    <motion.div variants={textVariants}>
+                        <p className="hollow-text hover:text-primary-100 transition">{"MAX"}</p>
+                    </motion.div>
+                    <motion.div variants={textVariants}>
+                        <p className="hollow-text hover:text-primary-100 transition">{"JUŠKEVIČ"}</p>
+                    </motion.div>
+                </motion.div>
                 <div className="flex text-3xl md:text-5xl xl:text-6xl text-foreground">
                     <p>{"Frontend Engineer"}</p>
                 </div>
