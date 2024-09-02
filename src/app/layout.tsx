@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import React from "react";
 import {Providers} from "@/app/providers";
-import { Source_Code_Pro } from 'next/font/google';
+import { Lato } from 'next/font/google';
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 
-const scp = Source_Code_Pro({
+const lato = Lato({
     subsets: ['latin'],
     weight: ['300'],
 });
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en" className="light">
-            <body className={`${scp.className}`}>
+            <body className={`${lato.className}`}>
                 <Providers>
                     <Header/>
                     {children}
