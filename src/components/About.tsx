@@ -1,30 +1,17 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Button, Divider, Link, Tab, Tabs} from "@nextui-org/react";
 import {IconCode, IconFileDownload, IconSettings, IconStar, IconTool} from "@tabler/icons-react";
+import Languages from "@/components/ui/Languages";
+import Frameworks from "@/components/ui/Frameworks";
+import Tools from "@/components/ui/Tools";
+import Other from "@/components/ui/Other";
 
 interface AboutProps {
     id?: string;
 }
 
 const About: React.FC<AboutProps> = ({}) => {
-
-    const [orientation, setOrientation] = useState<"top" | "start">('top');
-
-    useEffect(() => {
-        const checkScreenSize = () => {
-            setOrientation(window.innerWidth > 1280 ? 'start' : 'top');
-        };
-
-        // check on component mounting
-        checkScreenSize();
-
-        // check when window resizes
-        window.addEventListener('resize', checkScreenSize);
-
-        // cleanup event listener
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
 
     return (
         <>
@@ -55,8 +42,8 @@ const About: React.FC<AboutProps> = ({}) => {
                 <div className="flex flex-row justify-start gap-8 text-3xl md:text-5xl text-foreground">
                     <h1>{"Skills Overview 💻"}</h1>
                 </div>
-                <div className="overflow-x-auto whitespace-nowrap">
-                    <Tabs variant="bordered" color="primary" size="lg" placement={orientation}>
+                <div className="overflow-x-auto whitespace-nowrap xl:w-1/2">
+                    <Tabs variant="bordered" color="primary" size="lg">
                         <Tab
                             key="languages"
                             title={
@@ -66,6 +53,7 @@ const About: React.FC<AboutProps> = ({}) => {
                                 </div>
                             }
                         >
+                            <Languages/>
                         </Tab>
                         <Tab
                             key="frameworks"
@@ -76,6 +64,7 @@ const About: React.FC<AboutProps> = ({}) => {
                                 </div>
                             }
                         >
+                            <Frameworks/>
                         </Tab>
                         <Tab
                             key="tools"
@@ -86,6 +75,7 @@ const About: React.FC<AboutProps> = ({}) => {
                                 </div>
                             }
                         >
+                            <Tools/>
                         </Tab>
                         <Tab
                             key="other"
@@ -96,10 +86,10 @@ const About: React.FC<AboutProps> = ({}) => {
                                 </div>
                             }
                         >
+                            <Other/>
                         </Tab>
                     </Tabs>
                 </div>
-
             </div>
         </>
     )
