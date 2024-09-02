@@ -1,5 +1,6 @@
-import type { Config } from "tailwindcss";
-import { nextui } from "@nextui-org/react";
+import type { Config } from 'tailwindcss';
+import { nextui } from '@nextui-org/react';
+import type { PluginAPI } from 'tailwindcss/types/config';
 
 const config: Config = {
   content: [
@@ -13,54 +14,79 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-            "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        black: "#000000",
-        white: "#FFFFFF",
-        gray: {
-          50: "#F9F9F9",   // Very light gray for subtle elements
-          100: "#F0F0F0",  // Light gray for backgrounds
-          200: "#D0D0D0",  // Medium gray for borders or secondary elements
-          300: "#A0A0A0",  // Dark gray for text or borders
-          400: "#707070",  // Darker gray for emphasis
-          500: "#404040",  // Almost black for strong contrasts
-          600: "#333333",  // Black-gray for text
-          700: "#1F1F1F",  // Almost black for backgrounds
-          800: "#0D0D0D",  // Very dark gray for deeper backgrounds
+        ghostwhite: '#F4F5FA', // Ghostwhite background color
+        blue: {
+          500: '#4A90E2', // Soft medium blue for primary elements
         },
+        gray: {
+          50: '#F9F9F9',  // Very light gray for subtle elements
+          100: '#F0F0F0', // Light gray for backgrounds or borders
+          200: '#E0E0E0', // Light gray for borders or shadows
+          300: '#B0B3C1', // Neutral gray for secondary elements
+          400: '#707070', // Gray for icons and less prominent text
+          500: '#333333', // Dark gray for text
+        },
+        coral: '#FF6F61', // Accent color for highlights and interactive elements
       },
     },
   },
-  darkMode: "class",
+  darkMode: 'class',
   plugins: [
     nextui({
       themes: {
+        light: {
+          colors: {
+            background: {
+              DEFAULT: '#F4F5FA', // Ghostwhite background
+              foreground: '#333333', // Dark gray text for readability
+            },
+            primary: {
+              DEFAULT: '#4A90E2', // Soft blue for primary buttons, links, etc.
+              foreground: '#FFFFFF', // White text on primary elements
+            },
+            secondary: {
+              DEFAULT: '#B0B3C1', // Neutral gray for secondary elements
+              foreground: '#333333', // Dark gray text on secondary elements
+            },
+          },
+        },
         dark: {
           colors: {
             primary: {
-              DEFAULT: "#FFFFFF", // White for primary elements
-              foreground: "#000000", // Black for text over white elements
+              DEFAULT: '#FFFFFF', // White for primary elements
+              foreground: '#000000', // Black for text over white elements
             },
             secondary: {
-              DEFAULT: "#D0D0D0", // Medium gray for accents
-              foreground: "#000000", // Black for text over gray elements
+              DEFAULT: '#D0D0D0', // Medium gray for accents
+              foreground: '#000000', // Black for text over gray elements
             },
             background: {
-              DEFAULT: "#000000", // Black background
-              foreground: "#FFFFFF", // White text
+              DEFAULT: '#000000', // Black background
+              foreground: '#FFFFFF', // White text
             },
             foreground: {
-              DEFAULT: "#FFFFFF", // White text color
+              DEFAULT: '#FFFFFF', // White text color
             },
-            focus: "#FFFFFF", // White for focus states
+            focus: '#FFFFFF', // White for focus states
           },
         },
       },
     }),
-    require("tailwindcss-animated"),
+    require('tailwindcss-animated'),
+    // Custom plugin with TypeScript types for addUtilities
+    function ({ addUtilities }: PluginAPI) {
+      const newUtilities = {
+        '.hollow-text': {
+          color: 'transparent',
+          '-webkit-text-stroke': '3px #333333',
+        },
+      };
+      addUtilities(newUtilities);
+    },
   ],
 };
 

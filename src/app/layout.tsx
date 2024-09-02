@@ -5,6 +5,7 @@ import {Providers} from "@/app/providers";
 import { Source_Code_Pro } from 'next/font/google';
 
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 
 const scp = Source_Code_Pro({
     subsets: ['latin'],
@@ -86,10 +87,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html lang="en" className='dark'>
+        <html lang="en" className="light">
             <body className={`${scp.className}`}>
                 <Providers>
+                    <Header/>
                     {children}
+                    <Footer/>
                 </Providers>
             </body>
         </html>

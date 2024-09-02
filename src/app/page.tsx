@@ -1,10 +1,8 @@
 'use client'
 import React, {useEffect} from 'react'
 import {Events} from "react-scroll"
+import Landing from "@/components/Landing";
 
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import Main from "@/components/layout/Main";
 
 export default function Home() {
 
@@ -25,11 +23,17 @@ export default function Home() {
 
     return (
         <>
-            <div className="p-6 md:p-20">
-                <Header/>
-                <Main />
-                <Footer/>
+            <div
+                className="
+                xl:p-40
+                top-0 z-[-2] h-screen w-screen bg-background bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"
+            >
+                <Landing/>
             </div>
         </>
     );
 }
+
+/*
+absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]
+*/
