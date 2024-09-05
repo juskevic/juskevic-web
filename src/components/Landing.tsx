@@ -46,7 +46,7 @@ export default function Landing() {
                                 <ModalHeader className="flex flex-col gap-1">Im Improving Things! ⚒️</ModalHeader>
                                 <ModalBody>
                                     <p>
-                                        {"My website is currently undergoing some exciting rework to enhance your experience. While I'm making these changes, you can still explore the content, but some features may not be fully functional. >_<"}
+                                        {"My website is currently undergoing some exciting rework to enhance your experience. While I'm making these changes, you can still explore the content, but some features may not be fully functional."}
                                     </p>
                                 </ModalBody>
                                 <ModalFooter>

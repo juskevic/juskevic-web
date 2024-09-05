@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {Card, CardBody, CardFooter, CardHeader, Chip} from "@nextui-org/react";
+import {    Card, CardBody, CardFooter, CardHeader, Chip} from "@nextui-org/react";
 import {
     IconBulb,
     IconHandClick,
@@ -37,7 +37,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         <CardBody></CardBody>
                         <CardFooter>
                             <Chip color="warning" variant="flat" size="sm" endContent={<IconBulb stroke={1.5} size={20} />}>
-                                All my posts are available on Medium
+                                {"All of my posts are available on Medium"}
                             </Chip>
                         </CardFooter>
                     </Card>
