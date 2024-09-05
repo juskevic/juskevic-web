@@ -17,7 +17,7 @@ const caveat = Caveat({
 
 export default function Landing() {
 
-    const {isOpen, onOpenChange} = useDisclosure();
+    const {onOpenChange} = useDisclosure();
 
     return (
         <>
