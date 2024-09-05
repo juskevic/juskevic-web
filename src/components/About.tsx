@@ -5,6 +5,7 @@ import {
     IconBulb,
     IconHandClick,
 } from "@tabler/icons-react";
+import { motion } from 'framer-motion';
 
 interface AboutProps {
     id?: string;
@@ -40,6 +41,43 @@ const About: React.FC<AboutProps> = ({}) => {
                                 {"All of my posts are available on Medium"}
                             </Chip>
                         </CardFooter>
+                    </Card>
+                </div>
+                <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
+                    <Card className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                        <CardBody>
+                            <div className="overflow-hidden flex flex-col gap-2">
+                                <motion.div
+                                    className="whitespace-nowrap flex"
+                                    animate={{ x: [-1000, 0] }}
+                                    transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+                                >
+                                    <span className="mr-4">HTML • CSS • House Music • JavaScript • TypeScript • Fantasy Books • React Native • Web Design • Next.js • Coffee • Bootstrap • Photography • Ambient Music • Swords • UI Design • NextUI • Expo • Material UI • EDM • Digital Art</span>
+                                    <span className="mr-4">HTML • CSS • House Music • JavaScript • TypeScript • Fantasy Books • React Native • Web Design • Next.js • Coffee • Bootstrap • AI • Ambient Music • Swords • UI Design • NextUI • Expo • Material UI • EDM • Digital Art</span>
+                                </motion.div>
+                                <motion.div
+                                    className="whitespace-nowrap flex"
+                                    animate={{ x: [0, -1000] }}
+                                    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+                                >
+                                    <span className="mr-4">Node.js • UX Design • Minimalism • API Development • Podcasting • Creative Writing • Figma • React • Deep House • Atomic Design • Prototyping • Sketching • GraphQL • Reading • Tailwind CSS • Typography • A/B Testing • Micro-interactions • User Testing • Design Systems</span>
+                                    <span className="mr-4">Node.js • UX Design • Minimalism • API Development • Sleeping • Creative Writing • Figma • React • Deep House • Atomic Design • Prototyping • Sketching • GraphQL • Reading • Tailwind CSS • Typography • A/B Testing • Micro-interactions • User Testing • Design Systems</span>
+                                </motion.div>
+                                <motion.div
+                                    className="whitespace-nowrap flex"
+                                    animate={{ x: [-1000, 0] }}
+                                    transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+                                >
+                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Adobe XD • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • Wireframing • Podcasting • Design Thinking • Visual Design</span>
+                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Adobe XD • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • Wireframing • Podcasting • Design Thinking • Visual Design</span>
+                                </motion.div>
+                            </div>
+                        </CardBody>
+                    </Card>
+                    <Card className="bg-background shadow outline-1 outline-secondary xl:w-2/3">
+                        <CardHeader className="!text-left">
+                            <p className="text-primary text-xl xl:text-2xl">{"..."}</p>
+                        </CardHeader>
                     </Card>
                 </div>
             </div>
