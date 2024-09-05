@@ -1,19 +1,10 @@
 'use client'
 import React from 'react';
-import {Button, Card, CardBody, CardFooter, CardHeader, Chip, Divider, Link, Tab, Tabs} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, CardHeader, Chip} from "@nextui-org/react";
 import {
     IconBulb,
-    IconCode,
-    IconFileDownload,
     IconHandClick,
-    IconSettings,
-    IconStar,
-    IconTool
 } from "@tabler/icons-react";
-import Languages from "@/components/ui/Languages";
-import Frameworks from "@/components/ui/Frameworks";
-import Tools from "@/components/ui/Tools";
-import Other from "@/components/ui/Other";
 
 interface AboutProps {
     id?: string;

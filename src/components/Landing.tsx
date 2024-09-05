@@ -2,6 +2,8 @@
 import React from 'react';
 import {Archivo_Black, Caveat} from "next/font/google";
 import SocialsButtonGroup from "@/components/ui/SocialsButtonGroup";
+import {Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure} from "@nextui-org/modal";
+import { Button } from '@nextui-org/react';
 
 const archivoBlack = Archivo_Black({
     subsets: ['latin'],
@@ -14,6 +16,8 @@ const caveat = Caveat({
 });
 
 export default function Landing() {
+
+    const {isOpen, onOpenChange} = useDisclosure();
 
     return (
         <>
@@ -35,6 +39,25 @@ export default function Landing() {
                         <p className="text-secondary xl:w-1/2">{"I'm a passionate Web Developer specializing in creating dynamic and user-friendly websites and applications. With a focus on modern frontend technologies, I deliver high-quality code and engaging user experiences."}</p>
                     </div>
                 </div>
+                <Modal defaultOpen onOpenChange={onOpenChange} className="bg-background">
+                    <ModalContent>
+                        {(onClose) => (
+                            <>
+                                <ModalHeader className="flex flex-col gap-1">Im Improving Things! ⚒️</ModalHeader>
+                                <ModalBody>
+                                    <p>
+                                        {"My website is currently undergoing some exciting rework to enhance your experience. While I'm making these changes, you can still explore the content, but some features may not be fully functional. >_<"}
+                                    </p>
+                                </ModalBody>
+                                <ModalFooter>
+                                    <Button color="warning" variant="flat" radius="full" onPress={onClose}>
+                                        {"I understand"}
+                                    </Button>
+                                </ModalFooter>
+                            </>
+                        )}
+                    </ModalContent>
+                </Modal>
             </div>
         </>
     );
