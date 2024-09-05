@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {    Card, CardBody, CardFooter, CardHeader, Chip} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, CardHeader, Chip, ScrollShadow} from "@nextui-org/react";
 import {
     IconBulb,
     IconHandClick,
@@ -46,30 +46,32 @@ const About: React.FC<AboutProps> = ({}) => {
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
                     <Card className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
                         <CardBody>
-                            <div className="overflow-hidden flex flex-col gap-2">
+                            <div className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+                            <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+                            <div className="overflow-hidden flex flex-col gap-2 text-lg md:text-xl">
                                 <motion.div
                                     className="whitespace-nowrap flex"
-                                    animate={{ x: [-1000, 0] }}
-                                    transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+                                    animate={{x: [-1000, 0]}}
+                                    transition={{repeat: Infinity, duration: 15, ease: "linear"}}
                                 >
-                                    <span className="mr-4">HTML • CSS • House Music • JavaScript • TypeScript • Fantasy Books • React Native • Web Design • Next.js • Coffee • Bootstrap • Photography • Ambient Music • Swords • UI Design • NextUI • Expo • Material UI • EDM • Digital Art</span>
+                                    <span className="mr-4">HTML • CSS • House Music • JavaScript • TypeScript • Fantasy Books • React Native • Web Design • Next.js • Coffee • Bootstrap • Framer Motion • Ambient Music • Swords • UI Design • NextUI • Expo • Material UI • EDM • Digital Art</span>
                                     <span className="mr-4">HTML • CSS • House Music • JavaScript • TypeScript • Fantasy Books • React Native • Web Design • Next.js • Coffee • Bootstrap • AI • Ambient Music • Swords • UI Design • NextUI • Expo • Material UI • EDM • Digital Art</span>
                                 </motion.div>
                                 <motion.div
                                     className="whitespace-nowrap flex"
-                                    animate={{ x: [0, -1000] }}
-                                    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+                                    animate={{x: [0, -1000]}}
+                                    transition={{repeat: Infinity, duration: 20, ease: "linear"}}
                                 >
-                                    <span className="mr-4">Node.js • UX Design • Minimalism • API Development • Podcasting • Creative Writing • Figma • React • Deep House • Atomic Design • Prototyping • Sketching • GraphQL • Reading • Tailwind CSS • Typography • A/B Testing • Micro-interactions • User Testing • Design Systems</span>
+                                    <span className="mr-4">Node.js • UX Design • Minimalism • API Development • Zelda • Creative Writing • Figma • React • Deep House • Atomic Design • Prototyping • Sketching • GraphQL • Reading • Tailwind CSS • Typography • A/B Testing • Micro-interactions • User Testing • Design Systems</span>
                                     <span className="mr-4">Node.js • UX Design • Minimalism • API Development • Sleeping • Creative Writing • Figma • React • Deep House • Atomic Design • Prototyping • Sketching • GraphQL • Reading • Tailwind CSS • Typography • A/B Testing • Micro-interactions • User Testing • Design Systems</span>
                                 </motion.div>
                                 <motion.div
                                     className="whitespace-nowrap flex"
-                                    animate={{ x: [-1000, 0] }}
-                                    transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+                                    animate={{x: [-1000, 0]}}
+                                    transition={{repeat: Infinity, duration: 10, ease: "linear"}}
                                 >
-                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Adobe XD • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • Wireframing • Podcasting • Design Thinking • Visual Design</span>
-                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Adobe XD • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • Wireframing • Podcasting • Design Thinking • Visual Design</span>
+                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Minimalism • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • WebStorm • Podcasting • Design Thinking • Visual Design</span>
+                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Adobe XD • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • Computer Science • Podcasting • Design Thinking • Visual Design</span>
                                 </motion.div>
                             </div>
                         </CardBody>
