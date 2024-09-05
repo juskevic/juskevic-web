@@ -17,7 +17,7 @@ export default function App() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen}>
+        <Navbar onMenuOpenChange={setIsMenuOpen} className="light">
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -27,14 +27,14 @@ export default function App() {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <ButtonGroup variant="flat" color="default">
-                        <Button className="text-lg font-bold" endContent={<IconUserCircle stroke={1.5}/>}>
+                    <ButtonGroup variant="solid" color="primary" radius="full">
+                        <Button className="text-lg">
                             About
                         </Button>
-                        <Button className="text-lg font-bold" endContent={<IconBriefcase stroke={1.5}/>}>
+                        <Button className="text-lg">
                             Projects
                         </Button>
-                        <Button className="text-lg font-bold" endContent={<IconAddressBook stroke={1.5}/>}>
+                        <Button className="text-lg">
                             Contact
                         </Button>
                     </ButtonGroup>
@@ -43,11 +43,12 @@ export default function App() {
             <NavbarContent justify="end">
                 <NavbarItem>
                     <Button
+                        radius="full"
                         className="text-lg"
                         as={Link}
                         href="#"
                         color="primary"
-                        variant="light"
+                        variant="solid"
                         endContent={<IconFileDownload stroke={1.5}/>}
                     >
                        CV

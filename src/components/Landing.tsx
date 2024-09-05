@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {Archivo_Black} from "next/font/google";
+import {Archivo_Black, Caveat} from "next/font/google";
 import SocialsButtonGroup from "@/components/ui/SocialsButtonGroup";
 import {Button, Chip} from "@nextui-org/react";
 
@@ -9,46 +9,39 @@ const archivoBlack = Archivo_Black({
     weight: ['400'],
 });
 
+const caveat = Caveat({
+    subsets: ['latin'],
+    weight: ['400'],
+});
+
 export default function Landing() {
 
     return (
         <>
-            <div className="flex justify-start flex-col gap-8 md:gap-10 xl:gap-14">
+            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pt-20 xl:pt-0">
                 <div
-                    className={`${archivoBlack.className} flex flex-col text-foreground text-6xl md:text-8xl xl:text-9xl`}>
-                    <div><p className="hollow-text hover:text-primary-100 transition">{"MAX"}</p></div>
-                    <div><p className="hollow-text hover:text-primary-100 transition">{"JUŠKEVIČ"}</p></div>
+                    className={`${archivoBlack.className} flex flex-col !text-center gap-20 md:gap-32 xl:gap-7 text-foreground text-4xl md:text-7xl xl:text-9xl`}>
+                    <div><p className="hollow-text">{"MAX JUŠKEVIČ"}</p></div>
+                    <div><p className="hollow-text">{"MAX JUŠKEVIČ"}</p></div>
+                    <div><p className="hollow-text">{"MAX JUŠKEVIČ"}</p></div>
+                    <div><p className="hollow-text">{"MAX JUŠKEVIČ"}</p></div>
                 </div>
-                <div className="flex text-3xl md:text-5xl xl:text-6xl text-foreground">
-                    <p>{"Frontend Engineer"}</p>
-                </div>
-                <div className="flex text-lg md:text-xl xl:text-2xl md:w-2/3 xl:w-1/2">
-                    <p>
-                        {"I'm a passionate Web Developer specializing in creating dynamic and user-friendly websites and applications. With a focus on modern frontend technologies, I deliver high-quality code and engaging user experiences."}
-                    </p>
-                </div>
-                <div className="flex flex-row gap-5">
-                    <div><SocialsButtonGroup/></div>
-                    <div>
-                        <Button
-                            size="md"
-                            variant="flat"
-                            color="primary"
-                            className="text-lg"
-                        >
-                            {"Get in Touch"}
-                        </Button>
+                <div className="flex-col space-y-5 pt-20 md:pt-28 xl:pt-32">
+                    <div className="flex flex-col gap-1">
+                        <p className={`${caveat.className} text-primary text-4xl xl:text-5xl`}>{"Max Juškevič"}</p>
+                        <p className={`text-secondary text-xl xl:text-2xl`}>{"Frontend Engineer"}</p>
                     </div>
-                </div>
-                <div>
-                    <Chip size="lg" color="warning" variant="flat">
-                        {"Website is under construction! ⚒️"}
-                    </Chip>
+                    <SocialsButtonGroup/>
+                    <div>
+                        <p className="text-secondary xl:w-1/2">{"I'm a passionate Web Developer specializing in creating dynamic and user-friendly websites and applications. With a focus on modern frontend technologies, I deliver high-quality code and engaging user experiences."}</p>
+                    </div>
                 </div>
             </div>
         </>
     );
 }
+
+/*I'm a passionate Web Developer specializing in creating dynamic and user-friendly websites and applications. With a focus on modern frontend technologies, I deliver high-quality code and engaging user experiences.*/
 
 /*
 <audio

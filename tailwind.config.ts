@@ -41,16 +41,16 @@ const config: Config = {
         light: {
           colors: {
             background: {
-              DEFAULT: '#F4F5FA', // Ghostwhite background
-              foreground: '#333333', // Dark gray text for readability
+              DEFAULT: '#faf9f6',
+              foreground: '#000000',
             },
             primary: {
-              DEFAULT: '#4A90E2', // Soft blue for primary buttons, links, etc.
-              foreground: '#FFFFFF', // White text on primary elements
+              DEFAULT: '#000000',
+              foreground: '#FFFFFF',
             },
             secondary: {
-              DEFAULT: '#B0B3C1', // Neutral gray for secondary elements
-              foreground: '#333333', // Dark gray text on secondary elements
+              DEFAULT: '#4a4a4a', // Neutral gray for secondary elements
+              foreground: '#a1a1a1', // Dark gray text on secondary elements
             },
           },
         },
@@ -80,12 +80,12 @@ const config: Config = {
     function ({ addUtilities }: PluginAPI) {
       const newUtilities = {
         '.hollow-text': {
-          color: 'transparent',
+          color: '#faf9f6',
           '-webkit-text-stroke': '2px #333333',
         },
-        '@screen sm': {
+        '@screen xl': {
           '.hollow-text': {
-            '-webkit-text-stroke': '3px #333333',
+            '-webkit-text-stroke': '4px #333333',
           },
         },
       };

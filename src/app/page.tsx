@@ -26,8 +26,8 @@ export default function Home() {
         <>
             <div
                 className="
-                p-6 md:p-20 xl:p-32 2xl:p-44 space-y-80
-                inset-0 -z-10 bg-ghostwhite bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
+                p-6 md:p-14 xl:p-32 2xl:p-36 space-y-80
+                inset-0 -z-10 bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
             >
                 <Landing/>
                 <About/>
