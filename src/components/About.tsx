@@ -1,7 +1,15 @@
 'use client'
 import React from 'react';
-import {Button, Divider, Link, Tab, Tabs} from "@nextui-org/react";
-import {IconCode, IconFileDownload, IconSettings, IconStar, IconTool} from "@tabler/icons-react";
+import {Button, Card, CardBody, CardFooter, CardHeader, Chip, Divider, Link, Tab, Tabs} from "@nextui-org/react";
+import {
+    IconBulb,
+    IconCode,
+    IconFileDownload,
+    IconHandClick,
+    IconSettings,
+    IconStar,
+    IconTool
+} from "@tabler/icons-react";
 import Languages from "@/components/ui/Languages";
 import Frameworks from "@/components/ui/Frameworks";
 import Tools from "@/components/ui/Tools";
@@ -15,80 +23,33 @@ const About: React.FC<AboutProps> = ({}) => {
 
     return (
         <>
-            <div className="flex justify-start flex-col gap-8 md:gap-14">
-                <div className="flex flex-row justify-between text-3xl md:text-5xl xl:text-6xl text-secondary italic">
-                    <Divider orientation="horizontal" className="w-1/2 xl:w-2/3 my-auto"/>
-                    <p>{"About Me"}</p>
-                </div>
-                <div className="flex flex-row justify-start gap-8 text-3xl md:text-5xl text-foreground">
-                    <h1>{"Hello 👋"}</h1>
-                    <Button
-                        className="text-xl md:text-3xl"
-                        as={Link}
-                        href="#"
-                        color="primary"
-                        variant="flat"
-                        endContent={<IconFileDownload stroke={1.5}/>}
-                    >
-                        CV
-                    </Button>
-                </div>
-                <div className="text-xl md:text-2xl xl:text-3xl w-full xl:w-4/5 2xl:w-3/4">
-                    <p>
-                        {"I'm Max, a self-taught frontend developer with a passion for taking creative ideas and turning them into interactive web experiences. I started out learning the basics of HTML and CSS, where I developed my skills in building responsive layouts and crafting clean, accessible code. Over time, I got more into the world of web development, learning more about JavaScript and modern frameworks like React and Next.js."}
-                    </p>
-                </div>
-
-                <div className="flex flex-row justify-start gap-8 text-3xl md:text-5xl text-foreground">
-                    <h1>{"Skills Overview 💻"}</h1>
-                </div>
-                <div className="overflow-x-auto whitespace-nowrap xl:w-1/2">
-                    <Tabs variant="bordered" color="primary" size="lg">
-                        <Tab
-                            key="languages"
-                            title={
-                                <div className="flex items-center space-x-2">
-                                    <IconCode stroke={1.5}/>
-                                    <span>Languages</span>
-                                </div>
-                            }
-                        >
-                            <Languages/>
-                        </Tab>
-                        <Tab
-                            key="frameworks"
-                            title={
-                                <div className="flex items-center space-x-2">
-                                    <IconSettings stroke={1.5}/>
-                                    <span>Frameworks</span>
-                                </div>
-                            }
-                        >
-                            <Frameworks/>
-                        </Tab>
-                        <Tab
-                            key="tools"
-                            title={
-                                <div className="flex items-center space-x-2">
-                                    <IconTool stroke={1.5}/>
-                                    <span>Tools</span>
-                                </div>
-                            }
-                        >
-                            <Tools/>
-                        </Tab>
-                        <Tab
-                            key="other"
-                            title={
-                                <div className="flex items-center space-x-2">
-                                    <IconStar stroke={1.5}/>
-                                    <span>Other</span>
-                                </div>
-                            }
-                        >
-                            <Other/>
-                        </Tab>
-                    </Tabs>
+            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14">
+                <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
+                    <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-2/3">
+                        <CardHeader className="flex flex-row justify-between">
+                            <p className="text-primary text-2xl xl:text-3xl">{"Hello 👋"}</p>
+                            <div className="flex flex-row gap-3">
+                                <p className="hidden md:flex text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</p>
+                                <IconHandClick stroke={1.5} className="my-auto"/>
+                            </div>
+                        </CardHeader>
+                        <CardBody>
+                            <p className="text-lg md:text-xl">
+                                {"I'm Max, a self-taught frontend developer with a passion for taking creative ideas and turning them into interactive web experiences. I started out learning the basics of HTML and CSS, where I developed my skills in building responsive layouts and crafting clean, accessible code. Over time, I got more into the world of web development, learning more about JavaScript and modern frameworks like React and Next.js."}
+                            </p>
+                        </CardBody>
+                    </Card>
+                    <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                        <CardHeader className="!text-left">
+                            <p className="text-primary text-xl xl:text-2xl">{"Latest blog post"}</p>
+                        </CardHeader>
+                        <CardBody></CardBody>
+                        <CardFooter>
+                            <Chip color="warning" variant="flat" size="sm" endContent={<IconBulb stroke={1.5} size={20} />}>
+                                All my posts are available on Medium
+                            </Chip>
+                        </CardFooter>
+                    </Card>
                 </div>
             </div>
         </>
