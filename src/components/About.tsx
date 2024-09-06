@@ -134,9 +134,9 @@ const About: React.FC<AboutProps> = ({}) => {
                                 radius="full"
                                 classNames={{
                                     base: "w-full",
-                                    track: "drop-shadow-md border border-default",
+                                    track: "border border-default",
                                     indicator: "bg-gradient-to-r from-cyan-400 to-cyan-600",
-                                    label: "tracking-wider font-medium text-default-600",
+                                    label: "tracking-wider",
                                     value: "text-foreground/60",
                                 }}
                                 label=
@@ -152,9 +152,9 @@ const About: React.FC<AboutProps> = ({}) => {
                                 radius="full"
                                 classNames={{
                                     base: "w-full",
-                                    track: "drop-shadow-md border border-default",
+                                    track: "border border-default",
                                     indicator: "bg-gradient-to-r from-green-400 to-green-600",
-                                    label: "tracking-wider font-medium text-default-600",
+                                    label: "tracking-wider",
                                     value: "text-foreground/60",
                                 }}
                                 label=

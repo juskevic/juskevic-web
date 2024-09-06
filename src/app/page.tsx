@@ -3,6 +3,7 @@ import React, {useEffect} from 'react'
 import {Events} from "react-scroll"
 import Landing from "@/components/Landing";
 import About from "@/components/About";
+import Projects from "@/components/Projects";
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
             >
                 <Landing/>
                 <About/>
+                <Projects/>
             </div>
         </>
     );
