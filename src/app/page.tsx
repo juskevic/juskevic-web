@@ -1,6 +1,6 @@
 'use client'
 import React, {useEffect} from 'react'
-import {Events} from "react-scroll"
+import {Events, Element} from "react-scroll"
 import Landing from "@/components/Landing";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -32,9 +32,9 @@ export default function Home() {
                 inset-0 -z-10 bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
             >
                 <Landing/>
-                <About/>
-                <Projects/>
-                <Contact/>
+                <Element name="about"><About/></Element>
+                <Element name="projects"><Projects/></Element>
+                <Element name="contact"><Contact/></Element>
             </div>
         </>
     );

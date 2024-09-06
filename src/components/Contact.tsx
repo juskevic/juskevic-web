@@ -5,9 +5,7 @@ import {
     IconAt,
     IconBrandBluesky, IconBrandCodepen,
     IconBrandGithub,
-    IconBrandGmail,
     IconBrandLinkedin,
-    IconFileDownload
 } from "@tabler/icons-react";
 
 
