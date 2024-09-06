@@ -42,7 +42,7 @@ const techItemsLine3: string[] = [
 ];
 
 const nonTechItemsLine3: string[] = [
-    "Lo-fi Music", "Interior Design", "Fantasy Books", "Techno",
+    "Lo-fi Music", "Fantasy Books", "Techno",
     "Coffee", "Synthwave",
 ];
 
