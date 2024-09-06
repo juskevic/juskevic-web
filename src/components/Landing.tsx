@@ -21,7 +21,7 @@ export default function Landing() {
 
     return (
         <>
-            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pt-20 xl:pt-0">
+            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pt-20 xl:pt-0 pb-80">
                 <div
                     className={`${archivoBlack.className} flex flex-col !text-center gap-20 md:gap-32 xl:gap-7 text-foreground text-4xl md:text-7xl xl:text-9xl`}>
                     <div><p className="hollow-text">{"MAX JUŠKEVIČ"}</p></div>

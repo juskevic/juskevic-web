@@ -22,7 +22,7 @@ const techItemsLine1: string[] = [
 
 const nonTechItemsLine1: string[] = [
     "House Music", "Fantasy Books", "Coffee", "Ambient Music",
-    "Swords", "EDM"
+    "Fencing", "EDM"
 ];
 
 const techItemsLine2: string[] = [
@@ -60,29 +60,49 @@ const About: React.FC<AboutProps> = ({}) => {
 
     return (
         <>
-            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14">
+            <div className="flex justify-end pb-5">
+                <div className="flex flex-row gap-3">
+                    <p className="text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</p>
+                    <IconHandClick stroke={1.5} className="my-auto text-secondary"/>
+                </div>
+            </div>
+            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
                     <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-2/3">
                         <CardHeader className="flex flex-row justify-between">
                             <p className="text-primary text-2xl xl:text-3xl">{"Hello 👋"}</p>
                             <div className="flex flex-row gap-3">
-                                <p className="hidden md:flex text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</p>
                                 <IconHandClick stroke={1.5} className="my-auto"/>
                             </div>
                         </CardHeader>
                         <CardBody>
                             <p className="text-lg md:text-xl">
-                                {"I'm Max, a self-taught frontend developer with a passion for taking creative ideas and turning them into interactive web experiences. I started out learning the basics of HTML and CSS, where I developed my skills in building responsive layouts and crafting clean, accessible code. Over time, I got more into the world of web development, learning more about JavaScript and modern frameworks like React and Next.js."}
+                                {"I'm"} Max, a self-taught frontend developer with a passion for taking creative ideas
+                                and
+                                turning them into interactive web experiences. I started out learning the basics
+                                of <span className="bg-orange-600 rounded-md bg-opacity-20">HTML</span> and <span
+                                className="bg-blue-600 rounded-md bg-opacity-20">CSS</span>, where I developed my skills
+                                in
+                                building responsive layouts and crafting clean, accessible code. Over time, I got more
+                                into the world of web development, learning more about <span
+                                className="bg-yellow-300 rounded-md bg-opacity-20">JavaScript</span> and modern
+                                frameworks
+                                like <span className="bg-cyan-500 rounded-md bg-opacity-20">React</span> and <span
+                                className="bg-gray-700 rounded-md bg-opacity-20">Next.js</span>.
                             </p>
                         </CardBody>
                     </Card>
                     <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
-                        <CardHeader className="!text-left">
+                        <CardHeader className="flex flex-row justify-between">
                             <p className="text-primary text-xl xl:text-2xl">{"Latest blog post"}</p>
+                            <div className="flex flex-row gap-3">
+                                <IconHandClick stroke={1.5} className="my-auto"/>
+                            </div>
                         </CardHeader>
                         <CardBody></CardBody>
                         <CardFooter>
-                            <Chip color="warning" variant="flat" size="sm" endContent={<IconBulb stroke={1.5} size={20} />}>
+                            <Chip color="warning" variant="flat" size="sm"
+                                  endContent={<IconBulb stroke={1.5} size={20}/>}>
                                 {"All of my posts are available on Medium"}
                             </Chip>
                         </CardFooter>
@@ -91,8 +111,10 @@ const About: React.FC<AboutProps> = ({}) => {
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
                     <Card className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
                         <CardBody>
-                            <div className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-background via-background/50 to-transparent pointer-events-none z-10"></div>
-                            <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+                            <div
+                                className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-background via-background/50 to-transparent pointer-events-none z-10"></div>
+                            <div
+                                className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-background via-background/50 to-transparent pointer-events-none z-10"></div>
                             <div className="overflow-hidden flex flex-col gap-2 text-lg md:text-xl xl:my-auto">
                                 <motion.div
                                     className="whitespace-nowrap flex"
@@ -100,7 +122,8 @@ const About: React.FC<AboutProps> = ({}) => {
                                     transition={{repeat: Infinity, duration: 15, ease: "linear"}}
                                 >
                                     {mixedItemsLine1.map((item, index) => (
-                                        <span key={index} className={nonTechItemsLine1.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
+                                        <span key={index}
+                                              className={nonTechItemsLine1.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
                                     ))}
                                 </motion.div>
                                 <motion.div
@@ -109,7 +132,8 @@ const About: React.FC<AboutProps> = ({}) => {
                                     transition={{repeat: Infinity, duration: 20, ease: "linear"}}
                                 >
                                     {mixedItemsLine2.map((item, index) => (
-                                        <span key={index} className={nonTechItemsLine2.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
+                                        <span key={index}
+                                              className={nonTechItemsLine2.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
                                     ))}
                                 </motion.div>
                                 <motion.div
@@ -118,7 +142,8 @@ const About: React.FC<AboutProps> = ({}) => {
                                     transition={{repeat: Infinity, duration: 10, ease: "linear"}}
                                 >
                                     {mixedItemsLine3.map((item, index) => (
-                                        <span key={index} className={nonTechItemsLine3.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
+                                        <span key={index}
+                                              className={nonTechItemsLine3.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
                                     ))}
                                 </motion.div>
                             </div>
@@ -144,7 +169,7 @@ const About: React.FC<AboutProps> = ({}) => {
                                         {"React Native"}
                                         <IconBrandReactNative stroke={1.5} className="my-auto"/>
                                     </div>}
-                                value={65}
+                                value={77}
                                 showValueLabel={true}
                             />
                             <Progress
@@ -162,7 +187,7 @@ const About: React.FC<AboutProps> = ({}) => {
                                         {"Node.js"}
                                         <IconBrandNodejs stroke={1.5} className="my-auto"/>
                                     </div>}
-                                value={50}
+                                value={52}
                                 showValueLabel={true}
                             />
                         </CardBody>

@@ -5,7 +5,7 @@ import {IconHandClick} from "@tabler/icons-react";
 
 export default function Projects() {
     return (
-        <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14">
+        <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
             <div className="flex xl:flex-row flex-col xl:justify-start gap-8 md:gap-10 xl:gap-14">
                 <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
@@ -57,7 +57,6 @@ export default function Projects() {
                             </div>
                         </div>
                         <div className="flex flex-row gap-3">
-                            <p className="hidden md:flex text-secondary text-lg">{"Tap to learn more"}</p>
                             <IconHandClick stroke={1.5} className="my-auto"/>
                         </div>
                     </CardHeader>
