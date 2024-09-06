@@ -18,19 +18,19 @@ export default function Contact() {
                 <h1 className="text-primary text-2xl md:text-3xl xl:text-4xl">{"Let's get in touch"}</h1>
             </div>
             <div className="flex flex-row gap-3 flex-wrap">
-                <Button radius="full" className="text-lg" as={Link} href="#" color="primary" variant="ghost" endContent={<IconAt stroke={1.5}/>}>
+                <Button radius="full" className="text-lg" as={Link} href="mailto:hello@juskevic.com" color="primary" variant="ghost" endContent={<IconAt stroke={1.5}/>}>
                     Send an Email
                 </Button>
-                <Button radius="full" className="text-lg" as={Link} href="#" color="primary" variant="ghost" endContent={<IconBrandLinkedin stroke={1.5}/>}>
+                <Button radius="full" className="text-lg" as={Link} href="https://www.linkedin.com/in/maxjuskevic/" color="primary" variant="ghost" endContent={<IconBrandLinkedin stroke={1.5}/>}>
                     Connect on LinkedIn
                 </Button>
-                <Button radius="full" className="text-lg" as={Link} href="#" color="primary" variant="ghost" endContent={<IconBrandBluesky stroke={1.5}/>}>
+                <Button radius="full" className="text-lg" as={Link} href="" color="primary" variant="ghost" endContent={<IconBrandBluesky stroke={1.5}/>}>
                     Follow Me on BlueSky
                 </Button>
-                <Button radius="full" className="text-lg" as={Link} href="#" color="primary" variant="ghost" endContent={<IconBrandGithub stroke={1.5}/>}>
+                <Button radius="full" className="text-lg" as={Link} href="https://github.com/juskevic" color="primary" variant="ghost" endContent={<IconBrandGithub stroke={1.5}/>}>
                     Check Out My Code on GitHub
                 </Button>
-                <Button radius="full" className="text-lg" as={Link} href="#" color="primary" variant="ghost" endContent={<IconBrandCodepen stroke={1.5}/>}>
+                <Button radius="full" className="text-lg" as={Link} href="https://codepen.io/juskevic" color="primary" variant="ghost" endContent={<IconBrandCodepen stroke={1.5}/>}>
                     See My Work on CodePen
                 </Button>
             </div>
