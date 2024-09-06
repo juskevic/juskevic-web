@@ -1,7 +1,9 @@
 'use client'
 import React from 'react';
-import {Card, CardBody, CardFooter, CardHeader, Chip} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, CardHeader, Chip, Progress} from "@nextui-org/react";
 import {
+    IconBrandNodejs,
+    IconBrandReactNative,
     IconBulb,
     IconHandClick,
 } from "@tabler/icons-react";
@@ -42,7 +44,7 @@ const techItemsLine3: string[] = [
 ];
 
 const nonTechItemsLine3: string[] = [
-    "Lo-fi Music", "Fantasy Books", "Techno",
+    "Lo-fi Music" , "Fantasy Books", "Techno",
     "Coffee", "Synthwave",
 ];
 
@@ -91,7 +93,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         <CardBody>
                             <div className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-background via-background/50 to-transparent pointer-events-none z-10"></div>
                             <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-background via-background/50 to-transparent pointer-events-none z-10"></div>
-                            <div className="overflow-hidden flex flex-col gap-2 text-lg md:text-xl">
+                            <div className="overflow-hidden flex flex-col gap-2 text-lg md:text-xl xl:my-auto">
                                 <motion.div
                                     className="whitespace-nowrap flex"
                                     animate={{x: [-1000, 0]}}
@@ -124,8 +126,46 @@ const About: React.FC<AboutProps> = ({}) => {
                     </Card>
                     <Card className="bg-background shadow outline-1 outline-secondary xl:w-2/3">
                         <CardHeader className="!text-left">
-                            <p className="text-primary text-xl xl:text-2xl">{"..."}</p>
+                            <p className="text-primary text-xl xl:text-2xl">{"What am I currently learning?"}</p>
                         </CardHeader>
+                        <CardBody className="gap-4">
+                            <Progress
+                                size="md"
+                                radius="full"
+                                classNames={{
+                                    base: "w-full",
+                                    track: "drop-shadow-md border border-default",
+                                    indicator: "bg-gradient-to-r from-cyan-400 to-cyan-600",
+                                    label: "tracking-wider font-medium text-default-600",
+                                    value: "text-foreground/60",
+                                }}
+                                label=
+                                    {<div className="flex flex-row text-lg gap-1">
+                                        {"React Native"}
+                                        <IconBrandReactNative stroke={1.5} className="my-auto"/>
+                                    </div>}
+                                value={65}
+                                showValueLabel={true}
+                            />
+                            <Progress
+                                size="md"
+                                radius="full"
+                                classNames={{
+                                    base: "w-full",
+                                    track: "drop-shadow-md border border-default",
+                                    indicator: "bg-gradient-to-r from-green-400 to-green-600",
+                                    label: "tracking-wider font-medium text-default-600",
+                                    value: "text-foreground/60",
+                                }}
+                                label=
+                                    {<div className="flex flex-row text-lg gap-1">
+                                        {"Node.js"}
+                                        <IconBrandNodejs stroke={1.5} className="my-auto"/>
+                                    </div>}
+                                value={50}
+                                showValueLabel={true}
+                            />
+                        </CardBody>
                     </Card>
                 </div>
             </div>
