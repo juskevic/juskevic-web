@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {Card, CardBody, CardFooter, CardHeader, Chip, ScrollShadow} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, CardHeader, Chip} from "@nextui-org/react";
 import {
     IconBulb,
     IconHandClick,
@@ -11,7 +11,50 @@ interface AboutProps {
     id?: string;
 }
 
+const techItemsLine1: string[] = [
+    "HTML", "CSS", "React Native", "JavaScript",
+    "React", "Web Design", "TypeScript", "Next.js",
+    "Bootstrap", "Framer Motion", "UI Design", "Expo",
+    "Material UI"
+];
+
+const nonTechItemsLine1: string[] = [
+    "House Music", "Fantasy Books", "Coffee", "Ambient Music",
+    "Swords", "EDM"
+];
+
+const techItemsLine2: string[] = [
+    "Node.js", "UX Design", "API Development", "Figma",
+    "React", "Atomic Design", "Prototyping", "Sketching",
+    "GraphQL", "Tailwind CSS", "Typography", "A/B Testing",
+    "Micro-interactions", "User Testing", "Design Systems"
+];
+
+const nonTechItemsLine2: string[] = [
+    "Minimalism", "Zelda", "Creative Writing", "Deep House",
+    "Reading", "Sleeping"
+];
+
+const techItemsLine3: string[] = [
+    "REST APIs", "Information Architecture", "Redux", "WebSockets",
+    "User Experience", "Visual Storytelling", "Accessibility", "Design Thinking",
+    "Visual Design", "Computer Science"
+];
+
+const nonTechItemsLine3: string[] = [
+    "Lo-fi Music", "Interior Design", "Fantasy Books", "Techno",
+    "Coffee", "Synthwave",
+];
+
+function shuffleArray(array: string[]): string[] {
+    return array.sort(() => Math.random() - 0.5);
+}
+
 const About: React.FC<AboutProps> = ({}) => {
+
+    const mixedItemsLine1: string[] = shuffleArray([...techItemsLine1, ...nonTechItemsLine1]);
+    const mixedItemsLine2: string[] = shuffleArray([...techItemsLine2, ...nonTechItemsLine2]);
+    const mixedItemsLine3: string[] = shuffleArray([...techItemsLine3, ...nonTechItemsLine3]);
 
     return (
         <>
@@ -54,24 +97,27 @@ const About: React.FC<AboutProps> = ({}) => {
                                     animate={{x: [-1000, 0]}}
                                     transition={{repeat: Infinity, duration: 15, ease: "linear"}}
                                 >
-                                    <span className="mr-4">HTML • CSS • House Music • JavaScript • TypeScript • Fantasy Books • React Native • Web Design • Next.js • Coffee • Bootstrap • Framer Motion • Ambient Music • Swords • UI Design • NextUI • Expo • Material UI • EDM • Digital Art</span>
-                                    <span className="mr-4">HTML • CSS • House Music • JavaScript • TypeScript • Fantasy Books • React Native • Web Design • Next.js • Coffee • Bootstrap • AI • Ambient Music • Swords • UI Design • NextUI • Expo • Material UI • EDM • Digital Art</span>
+                                    {mixedItemsLine1.map((item, index) => (
+                                        <span key={index} className={nonTechItemsLine1.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
+                                    ))}
                                 </motion.div>
                                 <motion.div
                                     className="whitespace-nowrap flex"
                                     animate={{x: [0, -1000]}}
                                     transition={{repeat: Infinity, duration: 20, ease: "linear"}}
                                 >
-                                    <span className="mr-4">Node.js • UX Design • Minimalism • API Development • Zelda • Creative Writing • Figma • React • Deep House • Atomic Design • Prototyping • Sketching • GraphQL • Reading • Tailwind CSS • Typography • A/B Testing • Micro-interactions • User Testing • Design Systems</span>
-                                    <span className="mr-4">Node.js • UX Design • Minimalism • API Development • Sleeping • Creative Writing • Figma • React • Deep House • Atomic Design • Prototyping • Sketching • GraphQL • Reading • Tailwind CSS • Typography • A/B Testing • Micro-interactions • User Testing • Design Systems</span>
+                                    {mixedItemsLine2.map((item, index) => (
+                                        <span key={index} className={nonTechItemsLine2.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
+                                    ))}
                                 </motion.div>
                                 <motion.div
                                     className="whitespace-nowrap flex"
                                     animate={{x: [-1000, 0]}}
                                     transition={{repeat: Infinity, duration: 10, ease: "linear"}}
                                 >
-                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Minimalism • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • WebStorm • Podcasting • Design Thinking • Visual Design</span>
-                                    <span className="mr-4">Lo-fi Music • REST APIs • Information Architecture • Interior Design • Redux • WebSockets • Fantasy Books • Techno • User Experience • Visual Storytelling • Adobe XD • User Interface Design • Coffee • Accessibility • Storybook • Synthwave • Computer Science • Podcasting • Design Thinking • Visual Design</span>
+                                    {mixedItemsLine3.map((item, index) => (
+                                        <span key={index} className={nonTechItemsLine3.includes(item) ? "opacity-60 mr-4" : "mr-4"}>{item}</span>
+                                    ))}
                                 </motion.div>
                             </div>
                         </CardBody>
