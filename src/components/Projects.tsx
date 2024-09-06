@@ -28,11 +28,21 @@ export default function Projects() {
                     </CardHeader>
                     <CardBody className="text-lg">
                         <p>
-                            {"This portfolio website is my first front-end project and a significant milestone in my web development journey. Over the past six months, it has garnered over 800 comments, reflecting its role as a dynamic sandbox for experimenting with new front-end technologies. It serves not only as a showcase of my work but also as a platform for continuously enhancing my skills and knowledge in the front-end stack."}
+                            <p>
+                                This portfolio website is my first front-end project and a significant milestone in my
+                                web development journey. Built with <span
+                                className="bg-gray-700 rounded-md bg-opacity-20">Next.js</span> and <span
+                                className="bg-cyan-500 rounded-md bg-opacity-20">React</span>, it has garnered over 800 commits
+                                in six months, showcasing its role as a dynamic sandbox for experimenting with new
+                                front-end technologies. It serves not only as a showcase of my work but also as a
+                                platform for continuously enhancing my skills and knowledge in the front-end stack.
+                            </p>
+
                         </p>
                     </CardBody>
                 </Card>
-                <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-1/3 mb-auto">
+                <Card isHoverable isPressable
+                      className="bg-background shadow outline-1 outline-secondary xl:w-1/3 mb-auto">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <Image
