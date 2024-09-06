@@ -13,7 +13,7 @@ export default function Projects() {
                             <Image
                                 alt="nextui logo"
                                 height={40}
-                                radius="lg"
+                                radius="md"
                                 src="icon.webp"
                                 width={40}
                             />
@@ -38,7 +38,7 @@ export default function Projects() {
                             <Image
                                 alt="nextui logo"
                                 height={40}
-                                radius="lg"
+                                radius="md"
                                 src="vycetkaLogo.png"
                                 width={40}
                             />
@@ -53,11 +53,17 @@ export default function Projects() {
                     </CardHeader>
                     <CardBody className="text-lg">
                         <p>
-                            {"Výčetka is a simple React Native app designed to help users count their coins and banknotes quickly. With an intuitive interface, it provides an easy way to input and tally your currency, giving you an accurate total with minimal effort. This project showcases my ability to build straightforward, functional applications using React Native."}
+                            Výčetka is a simple <span className="bg-cyan-700 rounded-md bg-opacity-20">React Native</span> app
+                            designed to help users count their coins and banknotes quickly. With an intuitive interface,
+                            it provides an easy way to input and tally your currency, giving you an accurate total with
+                            minimal effort. This project showcases my ability to build straightforward, functional
+                            applications using <span className="bg-cyan-700 rounded-md bg-opacity-20">React Native</span>.
                         </p>
+
                     </CardBody>
                 </Card>
-                <Card isHoverable={false} isPressable={false} className="bg-background shadow outline-1 outline-secondary mb-auto xl:w-1/3">
+                <Card isHoverable={false} isPressable={false}
+                      className="bg-background shadow outline-1 outline-secondary mb-auto xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <div>
