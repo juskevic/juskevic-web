@@ -20,7 +20,7 @@ export default function SocialsButtonGroup() {
             <Button as="a" target="_blank" isIconOnly href="https://www.linkedin.com/in/maxjuskevic/">
                 <IconBrandLinkedin stroke={1.5} className="text-primary"/>
             </Button>
-            <Button as="a" target="_blank" isIconOnly href="https://www.linkedin.com/in/maxjuskevic/">
+            <Button as="a" target="_blank" isIconOnly href="https://bsky.app/profile/juskevic.bsky.social">
                 <IconBrandBluesky stroke={1.5} className="text-primary"/>
             </Button>
             <Button as="a" target="_blank" isIconOnly href="https://www.upwork.com/freelancers/~01f6c71aea76152016">
