@@ -21,8 +21,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-    title: "Max Juškevič",
-    description: "Max's portfolio website and blog. 💫",
+    title: "Max Juškevič | Frontend Developer & Web Engineer",
+    description: "Max Juškevič is a Frontend Developer specializing in responsive web design, performance optimization, and building modern web applications using React and Vue.",
     creator: "Max Juškevič",
     publisher: "Max Juškevič",
     category: 'technology',
@@ -41,49 +41,38 @@ export const metadata: Metadata = {
         "Angular",
         "Responsive Design",
         "User Experience",
-        "User Interface",
         "Web Applications",
-        "E-commerce Websites",
-        "Portfolio Website",
-        "Blog",
-        "Web Design Trends",
-        "Frontend Frameworks",
-        "Accessibility",
         "Performance Optimization",
-        "Cross-Browser Compatibility",
-        "Mobile First Approach",
-        "Interactive Web Elements",
-        "Animation",
-        "Single Page Applications",
-        "API Integration",
-        "State Management",
-        "Component-Based Architecture"
+        "SEO Optimization",
+        "Portfolio Website",
+        "E-commerce Websites",
+        "SaaS Frontend Development"
     ],
     openGraph: {
-        images: '',
-        title: "Max Juškevič: Frontend Engineer",
-        description: "Max's portfolio website and blog. 💫",
+        title: "Max Juškevič | Frontend Developer & Web Engineer",
+        description: "Frontend developer specializing in responsive web design and modern web applications.",
         url: 'https://juskevic.com',
         siteName: 'Max Juškevič',
         type: 'website',
     },
     twitter: {
-        title: 'Max Juškevič: Frontend Engineer',
-        description: 'Max\'s portfolio website and blog. 💫',
+        title: 'Max Juškevič | Frontend Developer & Web Engineer',
+        description: 'Max Juškevič is a Frontend Developer specializing in responsive web design, modern web apps, and performance optimization.',
     },
     robots: {
-        index: false,
+        index: true,
         follow: true,
         nocache: true,
         googleBot: {
             index: true,
-            follow: false,
+            follow: true,
             'max-video-preview': -1,
             'max-image-preview': 'large',
             'max-snippet': -1,
         },
     }
 }
+
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
