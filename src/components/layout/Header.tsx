@@ -8,7 +8,7 @@ import {
     NavbarMenuToggle,
     NavbarMenu,
     Button,
-    ButtonGroup
+    ButtonGroup, NavbarMenuItem
 } from "@nextui-org/react";
 import {IconFileDownload} from "@tabler/icons-react";
 
@@ -56,7 +56,18 @@ export default function App() {
                 </NavbarItem>
             </NavbarContent>
 
-            <NavbarMenu>
+            <NavbarMenu className="max-h-[80px] border-b-1 border-b-secondary rounded">
+                <ButtonGroup aria-orientation="vertical" variant="solid" color="primary" radius="full">
+                    <Button as={Link} activeClass="opacity-30" to="about" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
+                        About
+                    </Button>
+                    <Button as={Link} activeClass="opacity-30" to="projects" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
+                        Projects
+                    </Button>
+                    <Button as={Link} activeClass="opacity-30" to="contact" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
+                        Contact
+                    </Button>
+                </ButtonGroup>
             </NavbarMenu>
 
         </Navbar>
