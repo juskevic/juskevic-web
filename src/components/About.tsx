@@ -62,7 +62,7 @@ const About: React.FC<AboutProps> = ({}) => {
         <>
             <div className="flex justify-end pb-5">
                 <div className="flex flex-row gap-3">
-                    <p className="text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</p>
+                    <p className="  text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</p>
                     <IconHandClick stroke={1.5} className="my-auto text-secondary"/>
                 </div>
             </div>

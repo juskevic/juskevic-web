@@ -15,7 +15,7 @@ export default function Contact() {
             <div>
                 <h1 className="text-primary text-2xl md:text-3xl xl:text-4xl">{"Let's get in touch"}</h1>
             </div>
-            <div className="flex flex-row gap-3 flex-wrap">
+            <div className="flex flex-row gap-3 flex-wrap md:max-w-[700px]">
                 <Button radius="full" className="text-lg" as={Link} href="mailto:hello@juskevic.com" color="primary" variant="ghost" endContent={<IconAt stroke={1.5}/>}>
                     Send an Email
                 </Button>

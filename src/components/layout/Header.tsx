@@ -28,13 +28,13 @@ export default function App() {
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
                     <ButtonGroup variant="solid" color="primary" radius="full">
-                        <Button as={Link} activeClass="opacity-30" to="about" spy={true} smooth={true} offset={-90} duration={500} className="text-lg">
+                        <Button as={Link} activeClass="opacity-30" to="about" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
                             About
                         </Button>
-                        <Button as={Link} activeClass="opacity-30" to="projects" spy={true} smooth={true} offset={-90} duration={500} className="text-lg">
+                        <Button as={Link} activeClass="opacity-30" to="projects" spy={true} smooth={true} offset={-300} duration={500} className="text-lg">
                             Projects
                         </Button>
-                        <Button as={Link} activeClass="opacity-30" to="contact" spy={true} smooth={true} offset={-90} duration={500} className="text-lg">
+                        <Button as={Link} activeClass="opacity-30" to="contact" spy={true} smooth={true} offset={-300} duration={500} className="text-lg">
                             Contact
                         </Button>
                     </ButtonGroup>
