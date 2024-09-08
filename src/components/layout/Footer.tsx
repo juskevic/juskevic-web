@@ -10,11 +10,11 @@ const Footer = () => {
                     <IconHeartFilled stroke={1.5} size={20} className="my-auto animate-jump animate-infinite animate-duration-[1500ms]" />
                     <span> using Next.js, React & NextUI.</span>
                 </p>
-                <p>
+                <div>
                     <p className="ml-4 text-secondary">
                         © {new Date().getFullYear()} Max Juškevič. All rights reserved.
                     </p>
-                </p>
+                </div>
             </div>
         </footer>
     )
