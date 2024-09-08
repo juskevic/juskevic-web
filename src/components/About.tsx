@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {Card, CardBody, CardFooter, CardHeader, Chip, Progress} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, CardHeader, Chip, Progress, useDisclosure} from "@nextui-org/react";
 import {
     IconBrandNodejs,
     IconBrandReactNative,
@@ -8,6 +8,7 @@ import {
     IconHandClick,
 } from "@tabler/icons-react";
 import { motion } from 'framer-motion';
+import AboutModal from "@/components/modals/AboutModal";
 
 interface AboutProps {
     id?: string;
@@ -58,40 +59,46 @@ const About: React.FC<AboutProps> = ({}) => {
     const mixedItemsLine2: string[] = shuffleArray([...techItemsLine2, ...nonTechItemsLine2]);
     const mixedItemsLine3: string[] = shuffleArray([...techItemsLine3, ...nonTechItemsLine3]);
 
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
     return (
         <>
             <div className="flex justify-end pb-5">
                 <div className="flex flex-row gap-3">
-                    <h2 className="  text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</h2>
+                    <h2 className="text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</h2>
                     <IconHandClick stroke={1.5} className="my-auto text-secondary"/>
                 </div>
             </div>
             <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
-                    <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-2/3">
+                    <Card
+                        isHoverable
+                        isPressable
+                        className="bg-background shadow outline-1 outline-secondary xl:w-2/3"
+                        onPress={onOpen}
+                    >
                         <CardHeader className="flex flex-row justify-between">
                             <p className="text-primary text-2xl xl:text-3xl">{"Hello 👋"}</p>
                             <div className="flex flex-row gap-3">
-                                <IconHandClick stroke={1.5} className="my-auto"/>
+                                <IconHandClick stroke={1.5} className="my-auto" />
                             </div>
                         </CardHeader>
                         <CardBody>
                             <p className="text-lg md:text-xl">
-                                {"I'm"} Max, a self-taught frontend developer with a passion for taking creative ideas
-                                and
-                                turning them into interactive web experiences. I started out learning the basics
-                                of <span className="bg-orange-600 rounded-md bg-opacity-20">HTML</span> and <span
-                                className="bg-blue-600 rounded-md bg-opacity-20">CSS</span>, where I developed my skills
-                                in
-                                building responsive layouts and crafting clean, accessible code. Over time, I got more
-                                into the world of web development, learning more about <span
+                                {"I'm"} Max, a self-taught frontend developer who loves turning creative ideas into
+                                interactive web experiences. I started by learning <span
+                                className="bg-orange-600 rounded-md bg-opacity-20">HTML</span> and <span
+                                className="bg-blue-600 rounded-md bg-opacity-20">CSS</span>, building responsive layouts
+                                and writing clean, accessible code. As I got more into web development, I learned <span
                                 className="bg-yellow-300 rounded-md bg-opacity-20">JavaScript</span> and modern
-                                frameworks
-                                like <span className="bg-cyan-500 rounded-md bg-opacity-20">React</span> and <span
+                                frameworks like <span
+                                className="bg-cyan-500 rounded-md bg-opacity-20">React</span> and <span
                                 className="bg-gray-700 rounded-md bg-opacity-20">Next.js</span>.
                             </p>
+
                         </CardBody>
                     </Card>
+                    <AboutModal isOpen={isOpen} onOpenChange={onOpenChange}/>
                     <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
                         <CardHeader className="flex flex-row justify-between">
                             <p className="text-primary text-xl xl:text-2xl">{"Latest blog post"}</p>

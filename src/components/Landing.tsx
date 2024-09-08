@@ -39,7 +39,7 @@ export default function Landing() {
                         <p className="text-secondary xl:w-1/2">{"I'm a passionate Web Developer specializing in creating dynamic and user-friendly websites and applications. With a focus on modern frontend technologies, I deliver high-quality code and engaging user experiences."}</p>
                     </div>
                 </div>
-                <Modal defaultOpen onOpenChange={onOpenChange} className="bg-background">
+                <Modal backdrop="blur" defaultOpen onOpenChange={onOpenChange} className="bg-background">
                     <ModalContent>
                         {(onClose) => (
                             <>
