@@ -3,15 +3,17 @@ import React from 'react';
 import {Card, CardBody, CardHeader, Image, useDisclosure} from "@nextui-org/react";
 import {IconHandClick} from "@tabler/icons-react";
 import FirstProjectModal from "@/components/modals/FirstProjectModal";
+import SecondProjectModal from "@/components/modals/SecondProjectModal";
 
 export default function Projects() {
 
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const { isOpen: isFirstModalOpen, onOpen: openFirstModal, onOpenChange: onFirstModalOpenChange } = useDisclosure();
+    const { isOpen: isSecondModalOpen, onOpen: openSecondModal, onOpenChange: onSecondModalOpenChange } = useDisclosure();
 
     return (
         <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
             <div className="flex xl:flex-row flex-col xl:justify-start gap-8 md:gap-10 xl:gap-14">
-                <Card isHoverable isPressable onPress={onOpen} className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                <Card isHoverable isPressable onPress={openFirstModal} className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <Image
@@ -43,8 +45,8 @@ export default function Projects() {
                         </p>
                     </CardBody>
                 </Card>
-                <FirstProjectModal isOpen={isOpen} onOpenChange={onOpenChange}/>
-                <Card isHoverable isPressable
+                <FirstProjectModal isOpen={isFirstModalOpen} onOpenChange={onFirstModalOpenChange} />
+                <Card isHoverable isPressable onPress={openSecondModal}
                       className="bg-background shadow outline-1 outline-secondary xl:w-1/3 mb-auto">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
@@ -89,6 +91,7 @@ export default function Projects() {
                         </p>
                     </CardBody>
                 </Card>
+                <SecondProjectModal isOpen={isSecondModalOpen} onOpenChange={onSecondModalOpenChange} />
             </div>
         </div>
     )

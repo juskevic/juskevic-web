@@ -2,12 +2,12 @@ import React from "react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Image} from "@nextui-org/react";
 import {IconBrandGithub} from "@tabler/icons-react";
 
-interface AboutModalProps {
+interface FirstProjectModal {
     isOpen: boolean;
     onOpenChange: (open: boolean) => void;
 }
 
-const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onOpenChange }) => {
+const FirstProjectModal: React.FC<FirstProjectModal> = ({ isOpen, onOpenChange }) => {
     return (
         <Modal hideCloseButton={true} scrollBehavior="inside" isOpen={isOpen} onClose={() => onOpenChange(false)} size="2xl">
             <ModalContent className="bg-background">
@@ -57,7 +57,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onOpenChange }) => {
                     </p>
                     <p>
                         Beyond being a showcase of my work, this portfolio is a living project where I continuously
-                        apply new ideas and techniques. It’s more than just a static collection of my {"achievements—it's"}
+                        apply new ideas and techniques. It’s more than just a static collection of my {"achievements, it's "}
                         an evolving representation of my growth, creativity, and dedication to mastering the frontend
                         stack. With this project, I aim to highlight not only what I’ve learned so far but also my
                         passion for web development, as I constantly seek new ways to improve and innovate.
@@ -65,15 +65,15 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onOpenChange }) => {
                 </ModalBody>
                 <ModalFooter>
                     <Button
+                        isIconOnly={true}
                         as="a"
                         href="https://github.com/juskevic/juskevic-web"
                         size="md"
                         variant="ghost"
                         className="text-medium my-auto flex md:hidden"
                         radius="full" color="primary"
-                        endContent={<IconBrandGithub stroke={1.5}/>}
                     >
-                        Source-code
+                        <IconBrandGithub stroke={1.5}/>
                     </Button>
                     <Button size="md" variant="flat" className="text-lg" radius="full" color="success" onPress={() => onOpenChange(false)}>
                         Close
@@ -84,4 +84,4 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onOpenChange }) => {
     );
 };
 
-export default AboutModal;
+export default FirstProjectModal;
