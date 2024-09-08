@@ -77,7 +77,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         className="bg-background shadow outline-1 outline-secondary xl:w-2/3"
                         onPress={onOpen}
                     >
-                        <CardHeader className="flex flex-row justify-between">
+                        <CardHeader className="flex flex-row justify-between pb-0">
                             <p className="text-primary text-2xl xl:text-3xl">{"Hello 👋"}</p>
                             <div className="flex flex-row gap-3">
                                 <IconHandClick stroke={1.5} className="my-auto" />
