@@ -4,7 +4,7 @@ import {Button, Link} from "@nextui-org/react";
 import {
     IconAt,
     IconBrandBluesky, IconBrandCodepen,
-    IconBrandGithub,
+    IconBrandGithub, IconBrandLeetcode,
     IconBrandLinkedin, IconBrandMedium, IconBrandYoutube,
 } from "@tabler/icons-react";
 
@@ -36,6 +36,9 @@ export default function Contact() {
                 </Button>
                 <Button isDisabled={true} radius="full" className="text-lg" as={Link} href="" color="primary" variant="ghost" endContent={<IconBrandYoutube stroke={1.5}/>}>
                     See My YouTube Content
+                </Button>
+                <Button radius="full" className="text-lg" as={Link} href="https://leetcode.com/u/juskevic/" color="primary" variant="ghost" endContent={<IconBrandLeetcode stroke={1.5}/>}>
+                    Follow My LeetCode Journey
                 </Button>
             </div>
         </div>
