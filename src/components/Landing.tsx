@@ -21,9 +21,8 @@ export default function Landing() {
                 <div
                     className={`${archivoBlack.className} flex flex-col !text-center gap-20 md:gap-32 xl:gap-7 text-foreground text-4xl md:text-7xl xl:text-9xl`}>
                     <div><h1 className="hollow-text">{"MAX JUŠKEVIČ"}</h1></div>
-                    <div><h1 className="hollow-text animate-fade-down animate-duration-100 animate-delay-[100ms] animate-once">{"MAX JUŠKEVIČ"}</h1></div>
-                    <div><h1 className="hollow-text animate-fade-down animate-duration-100 animate-delay-[200ms] animate-once">{"MAX JUŠKEVIČ"}</h1></div>
-                    <div><h1 className="hollow-text animate-fade-down animate-duration-100 animate-delay-[300ms] animate-once">{"MAX JUŠKEVIČ"}</h1></div>
+                    <div><h1 className="font-bold text-foreground">{"MAX JUŠKEVIČ"}</h1></div>
+                    <div><h1 className="hollow-text">{"MAX JUŠKEVIČ"}</h1></div>
                 </div>
                 <div className="flex-col space-y-5 pt-20 md:pt-28 xl:pt-32">
                     <div className="flex flex-col gap-1">

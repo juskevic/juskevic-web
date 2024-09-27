@@ -5,7 +5,7 @@ import {
     IconBrandGithub,
     IconBrandLinkedin,
     IconBrandUpwork,
-    IconBrandBluesky
+    IconBrandBluesky, IconBrandCodepen
 } from '@tabler/icons-react';
 
 export default function SocialsButtonGroup() {
@@ -23,8 +23,8 @@ export default function SocialsButtonGroup() {
             <Button as="a" target="_blank" isIconOnly href="https://bsky.app/profile/juskevic.bsky.social">
                 <IconBrandBluesky stroke={1.5} className="text-primary"/>
             </Button>
-            <Button as="a" target="_blank" isIconOnly href="https://www.upwork.com/freelancers/~01f6c71aea76152016">
-                <IconBrandUpwork stroke={1.5} className="text-primary"/>
+            <Button as="a" target="_blank" isIconOnly href="https://codepen.io/juskevic">
+                <IconBrandCodepen stroke={1.5} className="text-primary"/>
             </Button>
         </ButtonGroup>
     );

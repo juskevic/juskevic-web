@@ -34,12 +34,6 @@ export default function Contact() {
                 <Button radius="full" className="text-lg" as={Link} href="https://medium.com/@juskevic" color="primary" variant="ghost" endContent={<IconBrandMedium stroke={1.5}/>}>
                     Read My Blog on Medium
                 </Button>
-                <Button isDisabled={true} radius="full" className="text-lg" as={Link} href="" color="primary" variant="ghost" endContent={<IconBrandYoutube stroke={1.5}/>}>
-                    See My YouTube Content
-                </Button>
-                <Button radius="full" className="text-lg" as={Link} href="https://leetcode.com/u/juskevic/" color="primary" variant="ghost" endContent={<IconBrandLeetcode stroke={1.5}/>}>
-                    Follow My LeetCode Journey
-                </Button>
             </div>
         </div>
     );
