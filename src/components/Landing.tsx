@@ -1,12 +1,7 @@
 'use client'
 import React from 'react';
-import {Archivo_Black, Caveat} from "next/font/google";
+import {Caveat} from "next/font/google";
 import SocialsButtonGroup from "@/components/ui/SocialsButtonGroup";
-
-const archivoBlack = Archivo_Black({
-    subsets: ['latin'],
-    weight: ['400'],
-});
 
 const caveat = Caveat({
     subsets: ['latin'],

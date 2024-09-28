@@ -2,10 +2,7 @@
 import React from 'react';
 import {Button, Link} from "@nextui-org/react";
 import {
-    IconAt,
-    IconBrandBluesky, IconBrandCodepen,
-    IconBrandGithub, IconBrandLeetcode,
-    IconBrandLinkedin, IconBrandMedium, IconBrandYoutube,
+    IconAt, IconBrandCodepen, IconBrandGithub, IconBrandLinkedin,
 } from "@tabler/icons-react";
 
 
@@ -27,9 +24,6 @@ export default function Contact() {
                 </Button>
                 <Button radius="full" className="text-lg" as={Link} href="https://codepen.io/juskevic" color="primary" variant="ghost" endContent={<IconBrandCodepen stroke={1.5}/>}>
                     See My Work on CodePen
-                </Button>
-                <Button radius="full" className="text-lg" as={Link} href="https://medium.com/@juskevic" color="primary" variant="ghost" endContent={<IconBrandMedium stroke={1.5}/>}>
-                    Read My Blog on Medium
                 </Button>
             </div>
         </div>

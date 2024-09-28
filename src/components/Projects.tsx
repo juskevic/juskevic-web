@@ -12,8 +12,12 @@ export default function Projects() {
 
     return (
         <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
+            <div>
+                <h1 className="text-secondary text-3xl md:text-3xl xl:text-4xl">{"What I've Built"}</h1>
+            </div>
             <div className="flex xl:flex-row flex-col xl:justify-start gap-8 md:gap-10 xl:gap-14">
-                <Card isHoverable isPressable onPress={openFirstModal} className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                <Card isHoverable isPressable onPress={openFirstModal}
+                      className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <Image
@@ -45,7 +49,7 @@ export default function Projects() {
                         </p>
                     </CardBody>
                 </Card>
-                <FirstProjectModal isOpen={isFirstModalOpen} onOpenChange={onFirstModalOpenChange} />
+                <FirstProjectModal isOpen={isFirstModalOpen} onOpenChange={onFirstModalOpenChange}/>
                 <Card isHoverable isPressable onPress={openSecondModal}
                       className="bg-background shadow outline-1 outline-secondary xl:w-1/3 mb-auto">
                     <CardHeader className="flex justify-between gap-3">
@@ -67,11 +71,13 @@ export default function Projects() {
                     </CardHeader>
                     <CardBody className="text-lg">
                         <p>
-                            Výčetka is a simple <span className="bg-cyan-700 rounded-md bg-opacity-20">React Native</span> app
+                            Výčetka is a simple <span
+                            className="bg-cyan-700 rounded-md bg-opacity-20">React Native</span> app
                             designed to help users count their coins and banknotes quickly. With an intuitive interface,
                             it provides an easy way to input and tally your currency, giving you an accurate total with
                             minimal effort. This project showcases my ability to build straightforward, functional
-                            applications using <span className="bg-cyan-700 rounded-md bg-opacity-20">React Native</span>.
+                            applications using <span
+                            className="bg-cyan-700 rounded-md bg-opacity-20">React Native</span>.
                         </p>
 
                     </CardBody>
@@ -91,7 +97,7 @@ export default function Projects() {
                         </p>
                     </CardBody>
                 </Card>
-                <SecondProjectModal isOpen={isSecondModalOpen} onOpenChange={onSecondModalOpenChange} />
+                <SecondProjectModal isOpen={isSecondModalOpen} onOpenChange={onSecondModalOpenChange}/>
             </div>
         </div>
     )

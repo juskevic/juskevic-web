@@ -63,6 +63,9 @@ const About: React.FC<AboutProps> = ({}) => {
 
     return (
         <>
+            <div>
+                <h1 className="text-secondary text-3xl md:text-3xl xl:text-4xl pb-5 md:pb-0">{"My Story"}</h1>
+            </div>
             <div className="flex justify-end pb-5">
                 <div className="flex flex-row gap-3">
                     <h2 className="text-secondary text-xl xl:text-2xl">{"Tap to learn more"}</h2>
@@ -80,7 +83,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         <CardHeader className="flex flex-row justify-between pb-0">
                             <p className="text-primary text-2xl xl:text-3xl">{"Hello 👋"}</p>
                             <div className="flex flex-row gap-3">
-                                <IconHandClick stroke={1.5} className="my-auto" />
+                                <IconHandClick stroke={1.5} className="my-auto"/>
                             </div>
                         </CardHeader>
                         <CardBody>
