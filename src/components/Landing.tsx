@@ -18,11 +18,27 @@ export default function Landing() {
     return (
         <>
             <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pt-20 xl:pt-0 pb-80">
-                <div
-                    className={`${archivoBlack.className} flex flex-col !text-center gap-20 md:gap-32 xl:gap-7 text-foreground text-4xl md:text-7xl xl:text-9xl`}>
-                    <div><h1 className="hollow-text">{"MAX JUŠKEVIČ"}</h1></div>
-                    <div><h1 className="font-bold text-foreground">{"MAX JUŠKEVIČ"}</h1></div>
-                    <div><h1 className="hollow-text">{"MAX JUŠKEVIČ"}</h1></div>
+                <div className={`flex flex-col text-foreground text-3xl gap-8 xl:text-4xl xl:gap-10 xl:w-2/3`}>
+                    <div>
+                        <span>{"Building websites is what I "}</span>
+                        <span className="font-bold">{"love "}</span>
+                        <span>{"to do."}</span>
+                    </div>
+                    <div>
+                        <span>{" I focus on using "}</span>
+                        <span className="font-bold">{"modern tools "}</span>
+                        <span>{"to create something both "}</span>
+                        <span className="font-bold">{"functional "}</span>
+                        <span>{"and "}</span>
+                        <span className="font-bold">{"fun."}</span>
+                    </div>
+                    <div>
+                        <span>{"I'm here to turn your "}</span>
+                        <span className="font-bold">{"ideas "}</span>
+                        <span>{"into "}</span>
+                        <span className="font-bold">{"reality"}</span>
+                        <span>{"."}</span>
+                    </div>
                 </div>
                 <div className="flex-col space-y-5 pt-20 md:pt-28 xl:pt-32">
                     <div className="flex flex-col gap-1">
