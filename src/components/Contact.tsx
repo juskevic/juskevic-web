@@ -22,9 +22,6 @@ export default function Contact() {
                 <Button radius="full" className="text-lg" as={Link} href="https://www.linkedin.com/in/maxjuskevic/" color="primary" variant="ghost" endContent={<IconBrandLinkedin stroke={1.5}/>}>
                     Connect on LinkedIn
                 </Button>
-                <Button radius="full" className="text-lg" as={Link} href="https://bsky.app/profile/juskevic.bsky.social" color="primary" variant="ghost" endContent={<IconBrandBluesky stroke={1.5}/>}>
-                    Follow Me on BlueSky
-                </Button>
                 <Button radius="full" className="text-lg" as={Link} href="https://github.com/juskevic" color="primary" variant="ghost" endContent={<IconBrandGithub stroke={1.5}/>}>
                     Check Out My Code on GitHub
                 </Button>
