@@ -13,19 +13,21 @@ const techItemsLine1: string[] = [
     "HTML", "CSS", "React Native", "JavaScript",
     "React", "Web Design", "TypeScript", "Next.js",
     "Bootstrap", "Framer Motion", "UI Design", "Expo",
-    "Material UI"
+    "Material UI", "Express.js", "Firebase", "MongoDB",
+    "PostgreSQL", "REST APIs", "GraphQL", "Docker"
 ];
 
 const nonTechItemsLine1: string[] = [
     "House Music", "Fantasy Books", "Coffee", "Ambient Music",
-    "Fencing", "EDM"
+    "Fencing", "EDM", "Nature", "IDM", "Reading", "Studying"
 ];
 
 const techItemsLine2: string[] = [
     "Node.js", "UX Design", "API Development", "Figma",
     "React", "Atomic Design", "Prototyping", "Sketching",
     "GraphQL", "Tailwind CSS", "Typography", "A/B Testing",
-    "Micro-interactions", "User Testing", "Design Systems"
+    "Micro-interactions", "User Testing", "Design Systems",
+    "Redis", "Prisma", "Cypress", "Jest", "AWS", "Serverless"
 ];
 
 const nonTechItemsLine2: string[] = [
@@ -36,7 +38,9 @@ const nonTechItemsLine2: string[] = [
 const techItemsLine3: string[] = [
     "REST APIs", "Information Architecture", "Redux", "WebSockets",
     "User Experience", "Visual Storytelling", "Accessibility", "Design Thinking",
-    "Visual Design", "Computer Science"
+    "Visual Design", "Computer Science", "Kubernetes", "SQL", "NoSQL",
+    "OAuth", "Serverless Functions", "RabbitMQ", "Nginx", "CI/CD Pipelines",
+    "Git", "Docker Compose", "Cloud Functions", "Microservices"
 ];
 
 const nonTechItemsLine3: string[] = [
