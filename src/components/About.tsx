@@ -1,12 +1,7 @@
 'use client'
 import React from 'react';
-import {Card, CardBody, CardFooter, CardHeader, Chip, Progress, useDisclosure} from "@nextui-org/react";
-import {
-    IconBrandNodejs,
-    IconBrandReactNative,
-    IconBulb,
-    IconHandClick,
-} from "@tabler/icons-react";
+import {Card, CardBody, CardFooter, CardHeader, ScrollShadow, useDisclosure} from "@nextui-org/react";
+import {IconHandClick,} from "@tabler/icons-react";
 import { motion } from 'framer-motion';
 import AboutModal from "@/components/modals/AboutModal";
 
@@ -73,7 +68,7 @@ const About: React.FC<AboutProps> = ({}) => {
                 </div>
             </div>
             <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
-                <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
+                <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14 xl:h-[250px]">
                     <Card
                         isHoverable
                         isPressable
@@ -87,18 +82,28 @@ const About: React.FC<AboutProps> = ({}) => {
                             </div>
                         </CardHeader>
                         <CardBody>
-                            <p className="text-lg md:text-xl">
-                                {"I'm"} Max, a self-taught frontend developer who loves turning creative ideas into
-                                interactive web experiences. I started by learning <span
-                                className="bg-orange-600 rounded-md bg-opacity-20">HTML</span> and <span
-                                className="bg-blue-600 rounded-md bg-opacity-20">CSS</span>, building responsive layouts
-                                and writing clean, accessible code. As I got more into web development, I learned <span
-                                className="bg-yellow-300 rounded-md bg-opacity-20">JavaScript</span> and modern
-                                frameworks like <span
-                                className="bg-cyan-500 rounded-md bg-opacity-20">React</span> and <span
-                                className="bg-gray-700 rounded-md bg-opacity-20">Next.js</span>.
-                            </p>
-
+                            <ScrollShadow hideScrollBar={true} className="xl:h-[250px]">
+                                <p className="text-lg md:text-xl">
+                                    {"I'm"} Max, a self-taught fullstack developer passionate about turning creative
+                                    ideas
+                                    into interactive experiences. My journey began with <span
+                                    className="bg-orange-600 rounded-md bg-opacity-20">HTML</span> and <span
+                                    className="bg-blue-600 rounded-md bg-opacity-20">CSS</span>, building responsive
+                                    layouts
+                                    and clean, accessible code. I soon learned <span
+                                    className="bg-yellow-300 rounded-md bg-opacity-20">JavaScript</span>, which led me
+                                    to
+                                    modern frameworks like <span
+                                    className="bg-cyan-500 rounded-md bg-opacity-20">React</span>, <span
+                                    className="bg-gray-700 rounded-md bg-opacity-20">Next.js</span>, and <span
+                                    className="bg-green-500 rounded-md bg-opacity-20">React Native</span>. I also work
+                                    with <span className="bg-purple-600 rounded-md bg-opacity-20">Node.js</span>, <span
+                                    className="bg-indigo-500 rounded-md bg-opacity-20">Express.js</span>, and <span
+                                    className="bg-red-500 rounded-md bg-opacity-20">Firebase</span> to build scalable,
+                                    dynamic applications. {"I'm"} always learning and staying on top of industry trends to
+                                    create the best user experiences.
+                                </p>
+                            </ScrollShadow>
                         </CardBody>
                     </Card>
                     <AboutModal isOpen={isOpen} onOpenChange={onOpenChange}/>
@@ -115,14 +120,14 @@ const About: React.FC<AboutProps> = ({}) => {
                     </Card>
                 </div>
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
-                    <Card className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                    <Card className="bg-background shadow outline-1 outline-secondary my-auto">
                         <CardBody>
                             <div
                                 className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-background via-background/50 to-transparent pointer-events-none z-10"></div>
                             <div
                                 className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-background via-background/50 to-transparent pointer-events-none z-10"></div>
                             <div className="overflow-hidden flex flex-col gap-2 text-lg md:text-xl xl:my-auto">
-                                <motion.div
+                            <motion.div
                                     className="whitespace-nowrap flex"
                                     animate={{x: [-1000, 0]}}
                                     transition={{repeat: Infinity, duration: 15, ease: "linear"}}
@@ -153,49 +158,6 @@ const About: React.FC<AboutProps> = ({}) => {
                                     ))}
                                 </motion.div>
                             </div>
-                        </CardBody>
-                    </Card>
-                    <Card className="bg-background shadow outline-1 outline-secondary xl:w-2/3">
-                        <CardHeader className="!text-left">
-                            <p className="text-primary text-xl xl:text-2xl">{"What am I currently learning?"}</p>
-                        </CardHeader>
-                        <CardBody className="gap-4">
-                            <Progress
-                                size="md"
-                                radius="full"
-                                classNames={{
-                                    base: "w-full",
-                                    track: "border border-default",
-                                    indicator: "bg-gradient-to-r from-cyan-400 to-cyan-600",
-                                    label: "tracking-wider",
-                                    value: "text-foreground/60",
-                                }}
-                                label=
-                                    {<div className="flex flex-row text-lg gap-1">
-                                        {"React Native"}
-                                        <IconBrandReactNative stroke={1.5} className="my-auto"/>
-                                    </div>}
-                                value={77}
-                                showValueLabel={true}
-                            />
-                            <Progress
-                                size="md"
-                                radius="full"
-                                classNames={{
-                                    base: "w-full",
-                                    track: "border border-default",
-                                    indicator: "bg-gradient-to-r from-green-400 to-green-600",
-                                    label: "tracking-wider",
-                                    value: "text-foreground/60",
-                                }}
-                                label=
-                                    {<div className="flex flex-row text-lg gap-1">
-                                        {"Node.js"}
-                                        <IconBrandNodejs stroke={1.5} className="my-auto"/>
-                                    </div>}
-                                value={52}
-                                showValueLabel={true}
-                            />
                         </CardBody>
                     </Card>
                 </div>
