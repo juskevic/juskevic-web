@@ -111,10 +111,6 @@ const About: React.FC<AboutProps> = ({}) => {
                         </CardHeader>
                         <CardBody></CardBody>
                         <CardFooter>
-                            <Chip color="warning" variant="flat" size="sm"
-                                  endContent={<IconBulb stroke={1.5} size={20}/>}>
-                                {"All of my posts are available on Medium"}
-                            </Chip>
                         </CardFooter>
                     </Card>
                 </div>
