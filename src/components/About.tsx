@@ -64,7 +64,7 @@ const About: React.FC<AboutProps> = ({}) => {
     return (
         <>
             <div>
-                <h1 className="text-secondary text-3xl md:text-3xl xl:text-4xl pb-5 md:pb-0">{"My Story"}</h1>
+                <h1 className="text-primary text-3xl md:text-4xl xl:text-5xl pb-5 md:pb-0">{"My Story"}</h1>
             </div>
             <div className="flex justify-end pb-5">
                 <div className="flex flex-row gap-3">

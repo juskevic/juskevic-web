@@ -4,7 +4,8 @@ import {
     IconMail,
     IconBrandGithub,
     IconBrandLinkedin,
-    IconBrandBluesky, IconBrandCodepen
+    IconBrandCodepen,
+    IconBrandLeetcode
 } from '@tabler/icons-react';
 
 export default function SocialsButtonGroup() {
@@ -21,6 +22,9 @@ export default function SocialsButtonGroup() {
             </Button>
             <Button as="a" target="_blank" isIconOnly href="https://codepen.io/juskevic">
                 <IconBrandCodepen stroke={1.5} className="text-primary"/>
+            </Button>
+            <Button as="a" target="_blank" isIconOnly href="https://leetcode.com/u/juskevic/">
+                <IconBrandLeetcode stroke={1.5} className="text-primary"/>
             </Button>
         </ButtonGroup>
     );
