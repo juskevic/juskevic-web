@@ -28,7 +28,7 @@ export default function Projects() {
                                 width={40}
                             />
                             <div>
-                                <p className="text-primary text-2xl pt-1">{"Portfolio Website"}</p>
+                                <p className="text-primary text-2xl pt-1">{"juskevic.com"}</p>
                             </div>
                         </div>
                         <div className="flex flex-row gap-3">
@@ -79,22 +79,39 @@ export default function Projects() {
                             applications using <span
                             className="bg-cyan-700 rounded-md bg-opacity-20">React Native</span>.
                         </p>
-
                     </CardBody>
                 </Card>
                 <Card isHoverable={false} isPressable={false}
                       className="bg-background shadow outline-1 outline-secondary mb-auto xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
+                            <Image
+                                alt="portfolio website logo"
+                                height={40}
+                                radius="md"
+                                src=""
+                                width={40}
+                            />
                             <div>
-                                <p className="text-primary text-2xl pt-1">{"Project #3"}</p>
+                                <p className="text-primary text-2xl pt-1">{"yanayushkevich.com"}</p>
                             </div>
                         </div>
+                        <div className="flex flex-row gap-3">
+                            <p className="hidden md:flex text-secondary text-lg">{""}</p>
+                            <IconHandClick stroke={1.5} className="my-auto"/>
+                        </div>
                     </CardHeader>
-                    <CardBody className="text-lg text-secondary">
-                        <p className="!text-center align-middle">
-                            {"Coming Soon "}
-                        </p>
+                    <CardBody className="text-lg">
+                        <p> This portfolio website was a project I developed for a client, serving as a major milestone
+                            in my professional web development journey. Built with <span
+                                className="bg-gray-700 rounded-md bg-opacity-20">Next.js</span>, <span
+                                className="bg-cyan-500 rounded-md bg-opacity-20">React</span>, <span
+                                className="bg-yellow-500 rounded-md bg-opacity-20">TypeScript</span>, and <span
+                                className="bg-indigo-500 rounded-md bg-opacity-20">NextUI</span>, this project showcases
+                            my ability to deliver high-quality, responsive, and user-centric solutions. The website
+                            highlights the {"client's"} work while offering a seamless and intuitive user experience,
+                            reflecting my dedication to utilizing cutting-edge technologies to fulfill client needs and
+                            create visually engaging web interfaces.</p>
                     </CardBody>
                 </Card>
                 <SecondProjectModal isOpen={isSecondModalOpen} onOpenChange={onSecondModalOpenChange}/>
