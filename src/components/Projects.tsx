@@ -85,13 +85,6 @@ export default function Projects() {
                       className="bg-background shadow outline-1 outline-secondary mb-auto xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
-                            <Image
-                                alt="portfolio website logo"
-                                height={40}
-                                radius="md"
-                                src=""
-                                width={40}
-                            />
                             <div>
                                 <p className="text-primary text-2xl pt-1">{"yanayushkevich.com"}</p>
                             </div>
@@ -115,6 +108,27 @@ export default function Projects() {
                     </CardBody>
                 </Card>
                 <SecondProjectModal isOpen={isSecondModalOpen} onOpenChange={onSecondModalOpenChange}/>
+            </div>
+            <div className="flex xl:flex-row flex-col xl:justify-start gap-8 md:gap-10 xl:gap-14">
+                <Card isHoverable isPressable onPress={openFirstModal}
+                      className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                    <CardHeader className="flex justify-between gap-3">
+                        <div className="flex gap-3">
+                            <div>
+                                <p className="text-primary text-2xl pt-1">{"Project #4"}</p>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-3">
+                            <p className="hidden md:flex text-secondary text-lg">{""}</p>
+                            <IconHandClick stroke={1.5} className="my-auto opacity-30"/>
+                        </div>
+                    </CardHeader>
+                    <CardBody className="text-lg">
+                        <p>
+                            ???
+                        </p>
+                    </CardBody>
+                </Card>
             </div>
         </div>
     )
