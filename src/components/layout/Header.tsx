@@ -19,10 +19,6 @@ export default function App() {
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} className="light">
             <NavbarContent>
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden"
-                />
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -56,21 +52,6 @@ export default function App() {
                     </Button>
                 </NavbarItem>
             </NavbarContent>
-
-            <NavbarMenu className="max-h-[80px] border-b-1 border-b-secondary rounded">
-                <ButtonGroup aria-orientation="vertical" variant="solid" color="primary" radius="full">
-                    <Button as={Link} activeClass="opacity-30" to="about" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                        About
-                    </Button>
-                    <Button as={Link} activeClass="opacity-30" to="projects" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                        Projects
-                    </Button>
-                    <Button as={Link} activeClass="opacity-30" to="contact" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                        Contact
-                    </Button>
-                </ButtonGroup>
-            </NavbarMenu>
-
         </Navbar>
     );
 }
