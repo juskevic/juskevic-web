@@ -37,7 +37,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ isOpen, onOpenChange }) => {
 
                 </ModalBody>
                 <ModalFooter>
-                    <Button size="md" variant="flat" className="text-lg" radius="full" color="success" onPress={() => onOpenChange(false)}>
+                    <Button size="md" variant="solid" className="text-lg" radius="full" color="primary" onPress={() => onOpenChange(false)}>
                         Close
                     </Button>
                 </ModalFooter>

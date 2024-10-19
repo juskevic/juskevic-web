@@ -27,7 +27,7 @@ export default function Home() {
     return (
         <div
             className="
-                p-6 md:p-14 xl:p-28
+                p-6 md:p-14 xl:p-40
                 inset-0 -z-10 bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
         >
             <Landing/>

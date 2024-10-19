@@ -13,7 +13,7 @@ export default function Projects() {
     return (
         <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
             <div>
-                <h1 className="text-primary text-3xl md:text-4xl xl:text-5xl">{"What I've Built"}</h1>
+                <h1 className="text-primary !text-right italic text-3xl md:text-4xl">{"What I've Built"}</h1>
             </div>
             <div className="flex xl:flex-row flex-col xl:justify-start gap-8 md:gap-10 xl:gap-14">
                 <Card isHoverable isPressable onPress={openFirstModal}

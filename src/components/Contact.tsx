@@ -10,7 +10,7 @@ export default function Contact() {
     return (
         <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
             <div>
-                <h1 className="text-primary text-3xl md:text-4xl xl:text-5xl">{"Let's get in touch"}</h1>
+                <h1 className="text-primary !text-right italic text-3xl md:text-4xl">{"Let's get in touch"}</h1>
             </div>
             <div className="flex flex-row gap-3 flex-wrap md:max-w-[700px]">
                 <Button radius="full" className="text-lg" as={Link} href="mailto:hello@juskevic.com" color="primary" variant="ghost" endContent={<IconAt stroke={1.5}/>}>
