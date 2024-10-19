@@ -75,7 +75,7 @@ const FirstProjectModal: React.FC<FirstProjectModal> = ({ isOpen, onOpenChange }
                     >
                         <IconBrandGithub stroke={1.5}/>
                     </Button>
-                    <Button size="md" variant="flat" className="text-lg" radius="full" color="success" onPress={() => onOpenChange(false)}>
+                    <Button size="md" variant="solid" className="text-lg" radius="full" color="primary" onPress={() => onOpenChange(false)}>
                         Close
                     </Button>
                 </ModalFooter>

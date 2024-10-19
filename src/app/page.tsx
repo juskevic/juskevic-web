@@ -25,18 +25,16 @@ export default function Home() {
     })
 
     return (
-        <>
-            <div
-                className="
+        <div
+            className="
                 p-6 md:p-14 xl:p-28
                 inset-0 -z-10 bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
-            >
-                <Landing/>
-                <Element name="about"><About/></Element>
-                <Element name="projects"><Projects/></Element>
-                <Element name="contact"><Contact/></Element>
-            </div>
-        </>
+        >
+            <Landing/>
+            <Element name="about"><About/></Element>
+            <Element name="projects"><Projects/></Element>
+            <Element name="contact"><Contact/></Element>
+        </div>
     );
 }
 

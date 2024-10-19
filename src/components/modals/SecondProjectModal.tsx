@@ -122,7 +122,7 @@ const SecondProjectModal: React.FC<SecondModalProps> = ({ isOpen, onOpenChange }
                     >
                         <IconLink stroke={1.5}/>
                     </Button>
-                    <Button size="md" variant="flat" className="text-lg" radius="full" color="success"
+                    <Button size="md" variant="solid" className="text-lg" radius="full" color="primary"
                             onPress={() => onOpenChange(false)}>
                         Close
                     </Button>
