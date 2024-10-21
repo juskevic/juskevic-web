@@ -5,8 +5,6 @@ import {
     Navbar,
     NavbarContent,
     NavbarItem,
-    NavbarMenuToggle,
-    NavbarMenu,
     Button,
     ButtonGroup
 } from "@nextui-org/react";
@@ -14,10 +12,8 @@ import {IconPencil} from "@tabler/icons-react";
 
 export default function App() {
 
-    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} className="light">
+        <Navbar className="light">
             <NavbarContent>
             </NavbarContent>
 
