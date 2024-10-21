@@ -85,6 +85,13 @@ export default function Projects() {
                       className="bg-background shadow outline-1 outline-secondary mb-auto xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
+                            <Image
+                                alt="vycetka logo"
+                                height={40}
+                                radius="full"
+                                src="https://mir-s3-cdn-cf.behance.net/user/115/4061861099650807.616438800e3ff.jpg"
+                                width={40}
+                            />
                             <div>
                                 <p className="text-primary text-2xl pt-1">{"yanayushkevich.com"}</p>
                             </div>
