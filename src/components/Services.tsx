@@ -1,74 +1,40 @@
 'use client'
 import React from 'react';
 import { Card, CardHeader, Button } from "@nextui-org/react";
-import {IconAlignRight} from "@tabler/icons-react";
+import {IconArrowRight, IconPointFilled} from "@tabler/icons-react";
 
 export default function Services() {
     return (
         <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
-            <div>
+            <div className="relative">
                 <h1 className="text-primary !text-right italic text-3xl md:text-4xl">{"Services"}</h1>
+                <div className="flex flex-row mt-4 justify-end">
+                    <p className="text-primary !text-right italic text-lg my-auto">
+                        currently unavailable
+                    </p>
+                    <IconPointFilled size="40" className="text-warning animate-pulse animate-duration-[1500ms] !text-right"/>
+                </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 xl:gap-14">
-                <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary mb-auto">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-10 xl:gap-14">
+                <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-primary mb-auto relative">
                     <CardHeader className="flex flex-col gap-3">
-                        <div className="flex gap-3">
-                            <div>
-                                <p className="text-primary text-2xl pt-1">{"Portfolio Websites"}</p>
-                                <p className="text-secondary">{"Showcase your work with a stunning, modern portfolio website. Perfect for artists, designers, developers, or anyone wanting to highlight their projects."}</p>
-                            </div>
+                        <div className="flex flex-col gap-3">
+                            <p className="text-primary text-3xl">{"Portfolio Websites"}</p>
+                            <p className="text-primary text-lg">{"Elevate your online presence with a modern, visually stunning portfolio website. Tailored for artists, designers, developers, and other creatives looking to make a lasting impression. My portfolio websites are built to showcase your best work while offering a seamless user experience."}</p>
+                            <p className="text-secondary text-lg mt-2 italic">{"from 10,000 CZK ($450 / €410)"}</p>
                         </div>
-                        <Button color="primary" className="mt-4 w-full">
-                            I want a Portfolio Website <IconAlignRight size="20"/>
-                        </Button>
+                        <Button isDisabled color="primary" className="mt-4 w-full" endContent={<IconArrowRight size="20" />}>I want a Portfolio Website</Button>
                     </CardHeader>
                 </Card>
 
-                <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary mb-auto">
+                <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-primary mb-auto">
                     <CardHeader className="flex flex-col gap-3">
-                        <div className="flex gap-3">
-                            <div>
-                                <p className="text-primary text-2xl pt-1">{"Landing Websites"}</p>
-                                <p className="text-secondary">{"Create an engaging landing page to capture leads and promote your product or service. Ideal for businesses launching new products or campaigns."}</p>
-                            </div>
+                        <div className="flex flex-col gap-3">
+                            <p className="text-primary text-3xl">{"Landing Pages"}</p>
+                            <p className="text-primary text-lg">{"Drive conversions with an engaging landing page tailored to your product or service. Perfect for businesses looking to capture leads and promote new campaigns, my landing pages are optimized for maximum impact and user engagement."}</p>
+                            <p className="text-secondary text-lg mt-2 italic">{"from 8,000 CZK ($360 / €330)"}</p>
                         </div>
-                        <Button variant="solid" className="mt-4 w-full">Learn More</Button>
-                    </CardHeader>
-                </Card>
-
-                <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary mb-auto">
-                    <CardHeader className="flex flex-col gap-3">
-                        <div className="flex gap-3">
-                            <div>
-                                <p className="text-primary text-2xl pt-1">{"E-commerce Websites"}</p>
-                                <p className="text-secondary">{"Build an online store with a smooth user experience, from product listings to checkout. Designed to convert visitors into customers."}</p>
-                            </div>
-                        </div>
-                        <Button variant="solid" className="mt-4 w-full">Learn More</Button>
-                    </CardHeader>
-                </Card>
-
-                <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary mb-auto">
-                    <CardHeader className="flex flex-col gap-3">
-                        <div className="flex gap-3">
-                            <div>
-                                <p className="text-primary text-2xl pt-1">{"Fullstack Web Applications"}</p>
-                                <p className="text-secondary">{"Develop complex web applications with both front-end and back-end features, tailored to your business needs."}</p>
-                            </div>
-                        </div>
-                        <Button variant="solid" className="mt-4 w-full">Learn More</Button>
-                    </CardHeader>
-                </Card>
-
-                <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary mb-auto">
-                    <CardHeader className="flex flex-col gap-3">
-                        <div className="flex gap-3">
-                            <div>
-                                <p className="text-primary text-2xl pt-1">{"Mobile Applications"}</p>
-                                <p className="text-secondary">{"Build cross-platform mobile apps for iOS and Android, offering a seamless user experience across devices."}</p>
-                            </div>
-                        </div>
-                        <Button variant="solid" className="mt-4 w-full">Learn More</Button>
+                        <Button isDisabled color="primary" className="mt-4 w-full" endContent={<IconArrowRight size="20" />}>I want a Landing Page</Button>
                     </CardHeader>
                 </Card>
             </div>
