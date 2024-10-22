@@ -96,10 +96,6 @@ export default function Projects() {
                                 <p className="text-primary text-2xl pt-1">{"yanayushkevich.com"}</p>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-3">
-                            <p className="hidden md:flex text-secondary text-lg">{""}</p>
-                            <IconHandClick stroke={1.5} className="my-auto"/>
-                        </div>
                     </CardHeader>
                     <CardBody className="text-lg">
                         <p> This portfolio website was a project I developed for a client, serving as a major milestone

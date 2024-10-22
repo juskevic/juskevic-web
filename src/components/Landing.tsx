@@ -35,7 +35,7 @@ export default function Landing() {
                         <span>{"."}</span>
                     </div>
                 </div>
-                <div className="flex-col space-y-5 pt-20 md:pt-28 xl:pt-32">
+                <div className="flex-col space-y-5 pt-20 md:pt-16">
                     <div className="flex flex-col gap-1">
                         <p className={`${caveat.className} text-primary text-4xl xl:text-5xl`}>{"Max Juškevič"}</p>
                         <p className={`text-secondary text-xl xl:text-2xl`}>{"Fullstack Engineer"}</p>
