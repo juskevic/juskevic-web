@@ -5,6 +5,7 @@ import Landing from "@/components/Landing";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Services from "@/components/Services";
 
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
             <Landing/>
             <Element name="about"><About/></Element>
             <Element name="projects"><Projects/></Element>
+            <Element name="services"><Services/></Element>
             <Element name="contact"><Contact/></Element>
         </div>
     );
