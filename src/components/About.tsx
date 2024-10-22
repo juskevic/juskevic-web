@@ -76,7 +76,7 @@ const About: React.FC<AboutProps> = ({}) => {
                     <Card
                         isHoverable
                         isPressable
-                        className="bg-background shadow outline-1 outline-secondary xl:w-2/3"
+                        className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-2/3"
                         onPress={onOpen}
                     >
                         <CardHeader className="flex flex-row justify-between pb-0">
@@ -111,7 +111,7 @@ const About: React.FC<AboutProps> = ({}) => {
                         </CardBody>
                     </Card>
                     <AboutModal isOpen={isOpen} onOpenChange={onOpenChange}/>
-                    <Card isHoverable isPressable className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                    <Card isHoverable isPressable className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3">
                         <CardHeader className="flex flex-row justify-between">
                             <p className="text-primary text-xl xl:text-2xl">{"Latest blog post"}</p>
                             <div className="flex flex-row gap-3">
@@ -124,7 +124,7 @@ const About: React.FC<AboutProps> = ({}) => {
                     </Card>
                 </div>
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
-                    <Card className="bg-background shadow outline-1 outline-secondary my-auto">
+                    <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary my-auto">
                         <CardBody>
                             <div
                                 className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-background via-background/50 to-transparent pointer-events-none z-10"></div>

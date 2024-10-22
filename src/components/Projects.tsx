@@ -17,7 +17,7 @@ export default function Projects() {
             </div>
             <div className="flex xl:flex-row flex-col xl:justify-start gap-8 md:gap-10 xl:gap-14">
                 <Card isHoverable isPressable onPress={openFirstModal}
-                      className="bg-background shadow outline-1 outline-secondary xl:w-1/3 mb-auto">
+                      className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3 mb-auto">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <Image
@@ -51,7 +51,7 @@ export default function Projects() {
                 </Card>
                 <FirstProjectModal isOpen={isFirstModalOpen} onOpenChange={onFirstModalOpenChange}/>
                 <Card isHoverable isPressable onPress={openSecondModal}
-                      className="bg-background shadow outline-1 outline-secondary xl:w-1/3 mb-auto">
+                      className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3 mb-auto">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <Image
@@ -82,7 +82,7 @@ export default function Projects() {
                     </CardBody>
                 </Card>
                 <Card isHoverable={false} isPressable={false}
-                      className="bg-background shadow outline-1 outline-secondary mb-auto xl:w-1/3">
+                      className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary mb-auto xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <Image
@@ -114,7 +114,7 @@ export default function Projects() {
             </div>
             <div className="flex xl:flex-row flex-col xl:justify-start gap-8 md:gap-10 xl:gap-14">
                 <Card isHoverable isPressable onPress={openFirstModal}
-                      className="bg-background shadow outline-1 outline-secondary xl:w-1/3">
+                      className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3">
                     <CardHeader className="flex justify-between gap-3">
                         <div className="flex gap-3">
                             <div>
