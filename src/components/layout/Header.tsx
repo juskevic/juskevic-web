@@ -26,9 +26,6 @@ export default function App() {
                         <Button as={Link} activeClass="" to="projects" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
                             Projects
                         </Button>
-                        <Button as={Link} activeClass="" to="" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                            Services
-                        </Button>
                         <Button as={Link} activeClass="" to="contact" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
                             Contact
                         </Button>
