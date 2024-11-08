@@ -8,7 +8,7 @@ const blogPosts = [
     { id: 2, title: "Mastering CSS Grid", excerpt: "Dive deep into CSS Grid and create complex layouts with ease.", date: "2023-05-20", tags: ["css", "webdesign", "frontend"] },
     { id: 3, title: "The Power of TypeScript", excerpt: "Discover how TypeScript can improve your JavaScript development experience.", date: "2023-05-25", tags: ["typescript", "javascript", "programming"] },
     { id: 4, title: "The Power of TypeScript", excerpt: "Discover how TypeScript can improve your JavaScript development experience.", date: "2023-05-25", tags: ["typescript", "javascript", "programming"] },
-    { id: 5, title: "The Power of TypeScript", excerpt: "Discover how TypeScript can improve your JavaScript development experience.", date: "2023-05-25", tags: ["typescript", "javascript", "programming", "flex-wrapK"] },
+    { id: 5, title: "The Power of TypeScript", excerpt: "Discover how TypeScript can improve your JavaScript development experience.", date: "2023-05-25", tags: ["typescript", "javascript", "programming", "flex-wrap"] },
 ]
 
 const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)))
@@ -47,7 +47,7 @@ export default function BlogMainPage() {
             <section>
                 <div className="space-y-8">
                     {blogPosts.map(post => (
-                        <Card isHoverable={true} isPressable={true} key={post.id} className="w-full p-4 pb-8 rounded-xl bg-background shadow border-1 border-b-3 border-r-3 border-secondary">
+                        <Card isHoverable={true} isPressable={true} key={post.id} className="!text-left justify-start w-full p-4 pb-8 rounded-xl bg-background shadow border-1 border-b-3 border-r-3 border-secondary">
                             <h3 className="text-xl font-bold mb-2">
                                 <Link href={`/blog/${post.id}`}>
                                     {post.title}
