@@ -88,30 +88,25 @@ const About: React.FC<AboutProps> = ({}) => {
                         <CardBody>
                             <ScrollShadow hideScrollBar={true} className="xl:h-[250px]">
                                 <p className="text-lg md:text-xl">
-                                    {"I'm"} Max, a self-taught fullstack developer passionate about turning creative
-                                    ideas
-                                    into interactive experiences. My journey began with <span
-                                    className="bg-orange-600 rounded-md bg-opacity-20">HTML</span> and <span
-                                    className="bg-blue-600 rounded-md bg-opacity-20">CSS</span>, building responsive
-                                    layouts
-                                    and clean, accessible code. I soon learned <span
-                                    className="bg-yellow-300 rounded-md bg-opacity-20">JavaScript</span>, which led me
-                                    to
-                                    modern frameworks like <span
+                                    {"I'm"} Max, a self-taught frontend developer passionate about transforming creative
+                                    ideas into interactive and visually engaging experiences. My journey started
+                                    with <span className="bg-orange-600 rounded-md bg-opacity-20">HTML</span> and <span
+                                    className="bg-blue-600 rounded-md bg-opacity-20">CSS</span>, mastering responsive
+                                    layouts and crafting clean, accessible code. I quickly picked up <span
+                                    className="bg-yellow-300 rounded-md bg-opacity-20">JavaScript</span>, which opened
+                                    the door to modern frontend frameworks like <span
                                     className="bg-cyan-500 rounded-md bg-opacity-20">React</span>, <span
                                     className="bg-gray-700 rounded-md bg-opacity-20">Next.js</span>, and <span
-                                    className="bg-green-500 rounded-md bg-opacity-20">React Native</span>. I also work
-                                    with <span className="bg-purple-600 rounded-md bg-opacity-20">Node.js</span>, <span
-                                    className="bg-indigo-500 rounded-md bg-opacity-20">Express.js</span>, and <span
-                                    className="bg-red-500 rounded-md bg-opacity-20">Firebase</span> to build scalable,
-                                    dynamic applications. {"I'm"} always learning and staying on top of industry trends to
-                                    create the best user experiences.
+                                    className="bg-green-500 rounded-md bg-opacity-20">React Native</span>. {"I'm"} dedicated
+                                    to staying up-to-date with the latest trends and best practices to create seamless,
+                                    dynamic user experiences.
                                 </p>
                             </ScrollShadow>
                         </CardBody>
                     </Card>
                     <AboutModal isOpen={isOpen} onOpenChange={onOpenChange}/>
-                    <Card isHoverable isPressable className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3">
+                    <Card isHoverable isPressable
+                          className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3">
                         <CardHeader className="flex flex-row justify-between">
                             <p className="text-primary text-xl xl:text-2xl">{"Latest blog post"}</p>
                             <div className="flex flex-row gap-3">

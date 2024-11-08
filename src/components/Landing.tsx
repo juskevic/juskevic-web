@@ -38,7 +38,7 @@ export default function Landing() {
                 <div className="flex-col space-y-5 pt-20 md:pt-16">
                     <div className="flex flex-col gap-1">
                         <p className={`${caveat.className} text-primary text-4xl xl:text-5xl`}>{"Max Juškevič"}</p>
-                        <p className={`text-secondary text-xl xl:text-2xl`}>{"Fullstack Engineer"}</p>
+                        <p className={`text-secondary text-xl xl:text-2xl`}>{"Frontend Engineer"}</p>
                     </div>
                     <SocialsButtonGroup/>
                     <div>
