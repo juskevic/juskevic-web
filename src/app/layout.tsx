@@ -4,9 +4,6 @@ import React from "react";
 import {Providers} from "@/app/providers";
 import { Montserrat } from 'next/font/google';
 
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-
 const montserrat = Montserrat({
     subsets: ['latin'],
     weight: ['400'],
@@ -79,9 +76,7 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
         <html lang="en" className="light">
             <body className={`${montserrat.className}`}>
                 <Providers>
-                    <Header/>
                     {children}
-                    <Footer/>
                 </Providers>
             </body>
         </html>

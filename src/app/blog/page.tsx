@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Blog landing page component (under development)
-const BlogLandingPage = () => {
+const BlogPage = () => {
     return (
         <div className="flex items-center justify-center h-screen">
             {/* Temporary message indicating that the blog is under development */}
@@ -12,4 +12,4 @@ const BlogLandingPage = () => {
     );
 };
 
-export default BlogLandingPage;
+export default BlogPage;

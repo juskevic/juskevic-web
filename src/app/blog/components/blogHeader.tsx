@@ -9,9 +9,9 @@ import {
     Button,
     ButtonGroup
 } from "@nextui-org/react";
-import {IconPencil} from "@tabler/icons-react";
+import {IconHome} from "@tabler/icons-react";
 
-export default function App() {
+export default function BlogHeader() {
 
     return (
         <Navbar className="light">
@@ -22,13 +22,10 @@ export default function App() {
                 <NavbarItem>
                     <ButtonGroup variant="solid" color="primary" radius="full">
                         <Button as={Link} activeClass="" to="about" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                            About
+                            Latest
                         </Button>
                         <Button as={Link} activeClass="" to="projects" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                            Projects
-                        </Button>
-                        <Button as={Link} activeClass="" to="contact" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                            Contact
+                            About
                         </Button>
                     </ButtonGroup>
                 </NavbarItem>
@@ -39,12 +36,12 @@ export default function App() {
                         radius="full"
                         className="text-lg"
                         as={NextLink}
-                        href="/blog"
+                        href="/"
                         color="primary"
                         variant="solid"
-                        endContent={<IconPencil stroke={1.5}/>}
+                        endContent={<IconHome stroke={1.5}/>}
                     >
-                       Blog
+                        Home
                     </Button>
                 </NavbarItem>
             </NavbarContent>
