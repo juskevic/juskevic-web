@@ -5,10 +5,9 @@ import {
     Navbar,
     NavbarContent,
     NavbarItem,
-    Button,
-    Input
+    Button
 } from "@nextui-org/react";
-import {IconHome, IconSearch} from "@tabler/icons-react";
+import {IconHome} from "@tabler/icons-react";
 
 export default function BlogHeader() {
 
