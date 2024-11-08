@@ -1,10 +1,10 @@
 'use client'
 
-import Header from '@/components/layout/Header';
 import {NextUIProvider} from '@nextui-org/react';
 import {usePathname, useRouter} from 'next/navigation'
 import React from "react";
 import Footer from "@/components/layout/Footer";
+import Header from '@/components/layout/Header';
 
 export function Providers({children}: { children: React.ReactNode }) {
     const router = useRouter();

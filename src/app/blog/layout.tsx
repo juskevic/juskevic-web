@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import "../globals.css";
 import React from "react";
 import { Montserrat } from 'next/font/google';
 
