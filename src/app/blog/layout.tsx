@@ -3,7 +3,7 @@ import React from "react";
 import { Montserrat } from 'next/font/google';
 
 import Footer from "@/components/layout/Footer";
-import BlogHeader from "@/app/blog/components/blogHeader";
+import BlogHeader from "@/app/blog/components/blog-header";
 
 const montserrat = Montserrat({
     subsets: ['latin'],

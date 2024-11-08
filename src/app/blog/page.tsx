@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogLanding from "@/app/blog/components/blogLanding";
+import BlogLanding from "@/app/blog/components/blog-landing";
 import BlogMainPage from "@/app/blog/components/blog-page";
 
 const BlogPage = () => {
