@@ -1,33 +1,34 @@
 'use client'
 import React from "react";
-import {Link} from "react-scroll";
 import NextLink from "next/link";
 import {
     Navbar,
     NavbarContent,
     NavbarItem,
     Button,
-    ButtonGroup
+    Input
 } from "@nextui-org/react";
-import {IconHome} from "@tabler/icons-react";
+import {IconHome, IconSearch} from "@tabler/icons-react";
 
 export default function BlogHeader() {
 
     return (
-        <Navbar className="light">
+        <Navbar>
             <NavbarContent>
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <ButtonGroup variant="solid" color="primary" radius="full">
-                        <Button as={Link} activeClass="" to="about" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                            Latest
-                        </Button>
-                        <Button as={Link} activeClass="" to="projects" spy={true} smooth={true} offset={-150} duration={500} className="text-lg">
-                            About
-                        </Button>
-                    </ButtonGroup>
+                    <Input
+                        isDisabled={true}
+                        variant="underlined"
+                        className="text-lg"
+                        color="primary"
+                        isClearable={true}
+                        radius="full"
+                        placeholder="Search..."
+                        startContent={<IconSearch stroke="1.5"/>}
+                    />
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
@@ -41,7 +42,7 @@ export default function BlogHeader() {
                         variant="solid"
                         endContent={<IconHome stroke={1.5}/>}
                     >
-                        Home
+                        Portfolio
                     </Button>
                 </NavbarItem>
             </NavbarContent>
