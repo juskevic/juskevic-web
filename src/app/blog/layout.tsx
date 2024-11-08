@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-    title: "Max Juškevič Blog | Frontend Insights & Web Development",
+    title: "Blog | Max Juškevič",
     description: "Explore blog posts by Max Juškevič on frontend development, modern web practices, and insights into web technologies like React and Vue.",
     creator: "Max Juškevič",
     publisher: "Max Juškevič",
