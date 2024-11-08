@@ -12,7 +12,7 @@ export default function BlogLanding() {
 
     return (
         <>
-            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pt-20 xl:pt-0 pb-80">
+            <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pt-20 xl:pt-0 pb-40">
                 <div className={`flex flex-col text-foreground text-3xl gap-8 xl:text-4xl xl:gap-10 xl:w-2/3`}>
                     <div>
                         {"I’m certain that "}

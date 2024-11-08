@@ -19,16 +19,6 @@ export default function BlogHeader() {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Input
-                        isDisabled={true}
-                        variant="underlined"
-                        className="text-lg"
-                        color="primary"
-                        isClearable={true}
-                        radius="full"
-                        placeholder="Search..."
-                        startContent={<IconSearch stroke="1.5"/>}
-                    />
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
