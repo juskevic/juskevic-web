@@ -1,12 +1,5 @@
 'use client'
 import React from 'react';
-import {Caveat} from "next/font/google";
-import SocialsButtonGroup from "@/components/ui/SocialsButtonGroup";
-
-const caveat = Caveat({
-    subsets: ['latin'],
-    weight: ['400'],
-});
 
 export default function BlogLanding() {
 
