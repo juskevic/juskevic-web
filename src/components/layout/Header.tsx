@@ -1,7 +1,6 @@
 'use client'
-import React from "react";
+import React, {useTransition} from "react";
 import {Link} from "react-scroll";
-import NextLink from "next/link";
 import {
     Navbar,
     NavbarContent,
@@ -10,8 +9,18 @@ import {
     ButtonGroup
 } from "@nextui-org/react";
 import {IconPencil} from "@tabler/icons-react";
+import {useRouter} from "next/navigation";
 
 export default function App() {
+
+    const [isPending, startTransition] = useTransition();
+    const router = useRouter();
+
+    const handleButtonPress = () => {
+        startTransition(() => {
+            router.push('/blog'); // Initiate navigation
+        });
+    };
 
     return (
         <Navbar className="light">
@@ -36,15 +45,15 @@ export default function App() {
             <NavbarContent justify="end">
                 <NavbarItem>
                     <Button
+                        onPress={handleButtonPress}
+                        isLoading={isPending}
                         radius="full"
                         className="text-lg"
-                        as={NextLink}
-                        href="/blog"
                         color="primary"
                         variant="solid"
                         endContent={<IconPencil stroke={1.5}/>}
                     >
-                       Blog
+                        {isPending ? 'Loading...' : 'Blog'}
                     </Button>
                 </NavbarItem>
             </NavbarContent>
