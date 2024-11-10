@@ -5,6 +5,12 @@ import {usePathname, useRouter} from 'next/navigation'
 import React from "react";
 import Footer from "@/components/layout/Footer";
 import Header from '@/components/layout/Header';
+import {Montserrat} from "next/font/google";
+
+const montserrat = Montserrat({
+    subsets: ['latin'],
+    weight: ['400'],
+});
 
 export function Providers({children}: { children: React.ReactNode }) {
     const router = useRouter();
@@ -13,7 +19,7 @@ export function Providers({children}: { children: React.ReactNode }) {
     const showHeader = !pathname.startsWith('/blog')
 
     return (
-        <NextUIProvider navigate={router.push}>
+        <NextUIProvider navigate={router.push} className={`${montserrat.className}`}>
             {showHeader && <Header/>}
             {children}
             {showHeader && <Footer/>}
