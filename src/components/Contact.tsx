@@ -28,9 +28,6 @@ export default function Contact() {
                 <Button radius="full" className="text-lg" as={Link} href="https://leetcode.com/u/juskevic/" color="primary" variant="ghost" endContent={<IconBrandLeetcode stroke={1.5}/>}>
                     Follow My LeetCode Journey
                 </Button>
-                <Button radius="full" className="text-lg" as={Link} href="https://codeforces.com/profile/juskevic" color="primary" variant="ghost" endContent={<IconCode stroke={1.5}/>}>
-                    Track My Progress on Codeforces
-                </Button>
             </div>
         </div>
     );
