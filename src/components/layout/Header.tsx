@@ -8,7 +8,7 @@ import {
     Button,
     ButtonGroup
 } from "@nextui-org/react";
-import {IconPencil} from "@tabler/icons-react";
+import {IconFileDownload, IconPencil} from "@tabler/icons-react";
 import {useRouter} from "next/navigation";
 
 export default function App() {
@@ -43,7 +43,15 @@ export default function App() {
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
-                <NavbarItem>
+                <NavbarItem className="space-x-2">
+                    <Button
+                        radius="full"
+                        className="text-lg"
+                        variant="bordered"
+                        endContent={<IconFileDownload stroke={1.5}/>}
+                    >
+                        CV
+                    </Button>
                     <Button
                         onPress={handleButtonPress}
                         isLoading={isPending}
@@ -51,7 +59,7 @@ export default function App() {
                         className="text-lg"
                         color="primary"
                         variant="solid"
-                        endContent={<IconPencil stroke={1.5}/>}
+                        endContent={isPending ? '' : <IconPencil stroke={1.5}/>}
                     >
                         {isPending ? 'Loading...' : 'Blog'}
                     </Button>
