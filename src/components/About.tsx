@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
-import {Card, CardBody, CardFooter, CardHeader, ScrollShadow, useDisclosure} from "@nextui-org/react";
-import {IconHandClick,} from "@tabler/icons-react";
+import {Card, CardBody, CardFooter, CardHeader, ScrollShadow, useDisclosure, Chip} from "@nextui-org/react";
+import {IconCalendar, IconHandClick, IconPencil} from "@tabler/icons-react";
 import { motion } from 'framer-motion';
 import AboutModal from "@/components/modals/AboutModal";
 import {BlogPostMetadata, blogPostsMetadata} from "@/app/blog/blogMetadata";
@@ -115,37 +115,40 @@ const About: React.FC<AboutProps> = ({}) => {
 
                     {latestPost && (
                         <Card
+                            as={Link}
+                            href={`/blog/${latestPost.id}`}
                             isHoverable
                             isPressable
                             className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3"
                         >
                             <CardHeader className="flex flex-row justify-between">
-                                <p className="text-primary text-xl xl:text-2xl">
-                                    {"Latest Blog Post"}
-                                </p>
+                                <h2 className="text-primary text-2xl">juskevic/blog</h2>
                                 <div className="flex flex-row gap-3">
-                                    <IconHandClick stroke={1.5} className="my-auto" />
+                                    <IconHandClick stroke={1.5} className="my-auto"/>
+                                    <IconPencil stroke={1.5} className="my-auto"/>
                                 </div>
                             </CardHeader>
                             <CardBody>
-                                <h2 className="text-lg font-bold">{latestPost.title}</h2>
-                                <p className="text-gray-600">{latestPost.excerpt}</p>
-                                <p className="text-sm text-secondary">
-                                    Published on:{" "}
+                                <div className="flex flex-col">
+                                    <h3 className="text-primary text-xl xl:text-3xl">
+                                        {latestPost.title}
+                                    </h3>
+                                    <p>
+                                        <p className="text-secondary text-xl">{latestPost.excerpt}</p>
+                                    </p>
+                                </div>
+                            </CardBody>
+                            <CardFooter>
+                                <Chip
+                                    variant="flat"
+                                    startContent={<IconCalendar stroke={1} className="my-auto"/>}
+                                >
                                     {new Date(latestPost.date).toLocaleDateString("en-US", {
                                         year: "numeric",
                                         month: "long",
                                         day: "numeric",
                                     })}
-                                </p>
-                            </CardBody>
-                            <CardFooter>
-                                <Link
-                                    href={`/blog/${latestPost.id}`}
-                                    className="text-blue-500 hover:underline"
-                                >
-                                    Read More
-                                </Link>
+                                </Chip>
                             </CardFooter>
                         </Card>
                     )}
