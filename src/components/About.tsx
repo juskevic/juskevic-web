@@ -134,7 +134,7 @@ const About: React.FC<AboutProps> = ({}) => {
                                         {latestPost.title}
                                     </h3>
                                     <p>
-                                        <p className="text-secondary text-xl">{latestPost.excerpt}</p>
+                                        <p className="text-secondary text-lg md:text-xl">{latestPost.excerpt}</p>
                                     </p>
                                 </div>
                             </CardBody>
