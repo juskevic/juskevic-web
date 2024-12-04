@@ -1,9 +1,7 @@
 'use client'
 import React from 'react';
 import {Button, Link} from "@nextui-org/react";
-import {
-    IconAt, IconBrandCodepen, IconBrandGithub, IconBrandLeetcode, IconBrandLinkedin, IconCode,
-} from "@tabler/icons-react";
+import {    IconAt, IconBrandCodepen, IconBrandGithub, IconBrandLeetcode, IconBrandLinkedin,} from "@tabler/icons-react";
 
 
 export default function Contact() {
