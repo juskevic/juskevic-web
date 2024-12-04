@@ -4,6 +4,8 @@ import {Card, CardBody, CardFooter, CardHeader, ScrollShadow, useDisclosure} fro
 import {IconHandClick,} from "@tabler/icons-react";
 import { motion } from 'framer-motion';
 import AboutModal from "@/components/modals/AboutModal";
+import {BlogPostMetadata, blogPostsMetadata} from "@/app/blog/blogMetadata";
+import Link from "next/link";
 
 interface AboutProps {
     id?: string;
@@ -60,6 +62,10 @@ const About: React.FC<AboutProps> = ({}) => {
 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+    const latestPost: BlogPostMetadata | undefined = blogPostsMetadata
+        .slice()
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0];
+
     return (
         <>
             <div>
@@ -73,6 +79,7 @@ const About: React.FC<AboutProps> = ({}) => {
             </div>
             <div className="flex flex-col justify-start gap-8 md:gap-10 xl:gap-14 pb-80">
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14 xl:h-[250px]">
+
                     <Card
                         isHoverable
                         isPressable
@@ -105,18 +112,43 @@ const About: React.FC<AboutProps> = ({}) => {
                         </CardBody>
                     </Card>
                     <AboutModal isOpen={isOpen} onOpenChange={onOpenChange}/>
-                    <Card isHoverable isPressable
-                          className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3">
-                        <CardHeader className="flex flex-row justify-between">
-                            <p className="text-primary text-xl xl:text-2xl">{"Latest blog post"}</p>
-                            <div className="flex flex-row gap-3">
-                                <IconHandClick stroke={1.5} className="my-auto"/>
-                            </div>
-                        </CardHeader>
-                        <CardBody></CardBody>
-                        <CardFooter>
-                        </CardFooter>
-                    </Card>
+
+                    {latestPost && (
+                        <Card
+                            isHoverable
+                            isPressable
+                            className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary xl:w-1/3"
+                        >
+                            <CardHeader className="flex flex-row justify-between">
+                                <p className="text-primary text-xl xl:text-2xl">
+                                    {"Latest Blog Post"}
+                                </p>
+                                <div className="flex flex-row gap-3">
+                                    <IconHandClick stroke={1.5} className="my-auto" />
+                                </div>
+                            </CardHeader>
+                            <CardBody>
+                                <h2 className="text-lg font-bold">{latestPost.title}</h2>
+                                <p className="text-gray-600">{latestPost.excerpt}</p>
+                                <p className="text-sm text-secondary">
+                                    Published on:{" "}
+                                    {new Date(latestPost.date).toLocaleDateString("en-US", {
+                                        year: "numeric",
+                                        month: "long",
+                                        day: "numeric",
+                                    })}
+                                </p>
+                            </CardBody>
+                            <CardFooter>
+                                <Link
+                                    href={`/blog/${latestPost.id}`}
+                                    className="text-blue-500 hover:underline"
+                                >
+                                    Read More
+                                </Link>
+                            </CardFooter>
+                        </Card>
+                    )}
                 </div>
                 <div className="flex xl:flex-row flex-col xl:justify-evenly gap-8 md:gap-10 xl:gap-14">
                     <Card className="bg-background shadow border-1 border-b-3 border-r-3 border-secondary my-auto">
